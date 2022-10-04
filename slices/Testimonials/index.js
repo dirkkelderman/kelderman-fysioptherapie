@@ -60,7 +60,7 @@ const Testimonials = ({ slice }) => {
             <PrismicText field={slice.primary.heading} />
           </Heading>
         )}
-        <ul className="grid grid-cols-1 gap-8 md:grid-cols-4">
+        <ul className="grid grid-cols-2 gap-8 md:grid-cols-4">
           {slice.items.map((item) => (
             <TestimonialCard key={item.image.url} item={item} />
           ))}

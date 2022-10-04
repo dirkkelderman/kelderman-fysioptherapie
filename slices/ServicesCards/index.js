@@ -30,7 +30,10 @@ const ServiceCard = ({ item }) => {
       </div>
       {prismicH.isFilled.link(item.buttonLink) && (
         <div>
-          <PrismicLink field={item.buttonLink} className="font-semibold">
+          <PrismicLink
+            field={item.buttonLink}
+            className="rounded bg-[#183540] px-5 py-3 font-semibold text-white"
+          >
             {item.buttonText || "More Info"}
           </PrismicLink>
         </div>
@@ -48,7 +51,7 @@ const ServicesCards = ({ slice }) => {
             <PrismicText field={slice.primary.heading} />
           </Heading>
         )}
-        <ul className="grid grid-cols-4 gap-8 md:grid-cols-4">
+        <ul className="grid auto-cols-auto gap-8 md:auto-cols-auto lg:grid-flow-col">
           {slice.items.map((item) => (
             <ServiceCard key={item.image.url} item={item} />
           ))}

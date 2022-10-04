@@ -9,18 +9,33 @@ const TextWithImage = ({ slice }) => {
 
   return (
     <Bounded as="section" className="bg-white">
-      <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
-        <div>
-          <PrismicRichText field={slice.primary.text} />
+      {slice.variation === "textRight" ? (
+        <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
+          <div>
+            {prismicH.isFilled.image(image) && (
+              <div className="bg-gray-100">
+                <PrismicNextImage field={image} layout="responsive" />
+              </div>
+            )}
+          </div>
+          <div>
+            <PrismicRichText field={slice.primary.text} />
+          </div>
         </div>
-        <div>
-          {prismicH.isFilled.image(image) && (
-            <div className="bg-gray-100">
-              <PrismicNextImage field={image} layout="responsive" />
-            </div>
-          )}
+      ) : (
+        <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
+          <div>
+            <PrismicRichText field={slice.primary.text} />
+          </div>
+          <div>
+            {prismicH.isFilled.image(image) && (
+              <div className="bg-gray-100">
+                <PrismicNextImage field={image} layout="responsive" />
+              </div>
+            )}
+          </div>
         </div>
-      </div>
+      )}
     </Bounded>
   );
 };

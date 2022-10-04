@@ -77,7 +77,7 @@ const LocationCards = ({ slice }) => {
             <PrismicText field={slice.primary.heading} />
           </Heading>
         )}
-        <ul className="grid grid-cols-2	">
+        <ul className="grid lg:grid-cols-2	">
           {slice.items.map((item) => (
             <LocationCard key={item.image.url} item={item} />
           ))}

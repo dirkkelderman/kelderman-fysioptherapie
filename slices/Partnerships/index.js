@@ -48,7 +48,7 @@ const Partnerships = ({ slice }) => {
             <PrismicText field={slice.primary.heading} />
           </Heading>
         )}
-        <ul className="grid grid-cols-1 gap-8 md:grid-cols-5">
+        <ul className="grid grid-cols-3 gap-8 md:grid-cols-5">
           {slice.items.map((item) => (
             <PartnershipCard key={item.logo.url} item={item} />
           ))}
