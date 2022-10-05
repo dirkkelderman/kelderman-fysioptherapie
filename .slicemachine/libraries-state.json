@@ -50,6 +50,7 @@
                   "config": {
                     "label": "CTA Link",
                     "placeholder": "",
+                    "allowTargetBlank": false,
                     "select": null
                   }
                 },
@@ -79,14 +80,14 @@
               "heading": [
                 {
                   "type": "heading1",
-                  "text": "Gradually",
+                  "text": "Happened",
                   "spans": []
                 }
               ],
               "text": [
                 {
                   "type": "paragraph",
-                  "text": "Amet deserunt nulla voluptate duis.",
+                  "text": "Ad ea quis proident sit nostrud aute non veniam dolor pariatur elit qui voluptate ipsum.",
                   "spans": []
                 }
               ],
@@ -97,16 +98,16 @@
                 },
                 "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613"
+                "url": "https://images.unsplash.com/photo-1508385082359-f38ae991e8f2"
               },
               "ctaLink": {
                 "link_type": "Web",
-                "url": "https://prismic.io"
+                "url": "http://twitter.com"
               },
               "ctaText": [
                 {
-                  "type": "paragraph",
-                  "text": "Excepteur exercitation dolor non id sit consequat veniam exercitation laborum exercitation anim amet proident nisi. Qui minim magna incididunt nulla voluptate consequat et consequat duis aliquip. Qui nostrud anim adipisicing do anim amet ut Lorem est elit excepteur consequat in consectetur.",
+                  "type": "heading1",
+                  "text": "Foreign",
                   "spans": []
                 }
               ]
@@ -656,6 +657,12 @@
                     "label": "Button Text",
                     "placeholder": ""
                   }
+                },
+                "location": {
+                  "type": "GeoPoint",
+                  "config": {
+                    "label": "Location"
+                  }
                 }
               },
               "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
@@ -675,27 +682,31 @@
                   },
                   "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b"
+                  "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468"
                 },
                 "text": [
                   {
                     "type": "paragraph",
-                    "text": "Duis aliquip cillum duis. Ipsum et dolor dolore dolore. Non dolore exercitation cillum duis qui eiusmod exercitation incididunt reprehenderit ad sint.",
+                    "text": "In labore veniam commodo eiusmod enim voluptate sit sint duis ullamco ex. Amet sunt nisi commodo mollit exercitation nisi excepteur non velit proident incididunt ea elit. Voluptate velit sint commodo excepteur elit velit consectetur do cillum voluptate nisi.",
                     "spans": []
                   }
                 ],
                 "buttonLink": {
                   "link_type": "Web",
-                  "url": "https://slicemachine.dev"
+                  "url": "http://twitter.com"
                 },
-                "buttonText": "floating"
+                "buttonText": "cloud",
+                "location": {
+                  "latitude": 48.8606111,
+                  "longitude": 2.337644
+                }
               }
             ],
             "primary": {
               "heading": [
                 {
                   "type": "heading1",
-                  "text": "Farmer",
+                  "text": "Bottom",
                   "spans": []
                 }
               ]

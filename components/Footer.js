@@ -10,9 +10,9 @@ export const Footer = ({ footer }) => {
         <div className="flex h-full flex-col justify-between">
           <PrismicRichText field={footer.data?.sitemapHeading} />
           <ul className=" list-none">
-            {footer.data?.sitemap.map((item) => (
+            {footer.data?.sitemap.map((item, index) => (
               <li
-                key={prismicH.asText(item.label)}
+                key={index}
                 className="tracking-tight text-white"
               >
                 <PrismicLink field={item.link}>
@@ -25,9 +25,9 @@ export const Footer = ({ footer }) => {
         <div className="flex h-full flex-col justify-between">
           <PrismicRichText field={footer.data?.locationsHeading} />
           <ul className=" list-none">
-            {footer.data?.locations.map((item) => (
+            {footer.data?.locations.map((item, index) => (
               <li
-                key={prismicH.asText(item.label)}
+                key={index}
                 className=" tracking-tight text-white"
               >
                 <PrismicRichText field={item.city} />
@@ -41,7 +41,7 @@ export const Footer = ({ footer }) => {
           <ul className=" list-none">
             {footer.data?.contact.map((item, index) => (
               <li
-                key={prismicH.asText(index)}
+                key={index}
                 className="tracking-tight text-white"
               >
                 <PrismicRichText field={item.email} />
@@ -53,9 +53,9 @@ export const Footer = ({ footer }) => {
         <div className="flex h-full flex-col justify-between">
           <PrismicRichText field={footer.data?.socialsHeading} />
           <ul className=" list-none">
-            {footer.data?.socials.map((item) => (
+            {footer.data?.socials.map((item, index) => (
               <li
-                key={prismicH.asText(item.label)}
+                key={index}
                 className=" tracking-tight text-white"
               >
                 <PrismicLink field={item.link}>

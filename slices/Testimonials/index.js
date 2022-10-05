@@ -60,8 +60,8 @@ const Testimonials = ({ slice }) => {
           </Heading>
         )}
         <ul className="grid grid-cols-2 gap-8 md:grid-cols-4">
-          {slice.items.map((item) => (
-            <TestimonialCard key={item.image.url} item={item} />
+          {slice.items.map((item, index) => (
+            <TestimonialCard key={index} item={item} />
           ))}
         </ul>
       </div>

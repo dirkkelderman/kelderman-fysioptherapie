@@ -57,8 +57,8 @@ const ReviewCards = ({ slice }) => {
           </div>
         )}
         <ul className="grid gap-8 lg:grid-cols-2">
-          {slice.items.map((item) => (
-            <ReviewCard key={item.image.url} item={item} />
+          {slice.items.map((item, index) => (
+            <ReviewCard key={index} item={item} />
           ))}
         </ul>
       </div>

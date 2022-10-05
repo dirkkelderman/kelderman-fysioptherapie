@@ -34,7 +34,7 @@ const ServiceCard = ({ item }) => {
             field={item.buttonLink}
             className="rounded bg-[#183540] px-5 py-3 font-semibold text-white"
           >
-            {item.buttonText || "More Info"}
+            {item.buttonText || "Meer info"}
           </PrismicLink>
         </div>
       )}
@@ -43,6 +43,7 @@ const ServiceCard = ({ item }) => {
 };
 
 const ServicesCards = ({ slice }) => {
+  console.log(slice);
   return (
     <Bounded as="section" className="bg-white">
       <div className="grid gap-12">
@@ -51,9 +52,9 @@ const ServicesCards = ({ slice }) => {
             <PrismicText field={slice.primary.heading} />
           </Heading>
         )}
-        <ul className="grid auto-cols-auto gap-8 md:auto-cols-auto lg:grid-flow-col">
-          {slice.items.map((item) => (
-            <ServiceCard key={item.image.url} item={item} />
+        <ul className="grid  auto-cols-[minmax(3,4)] gap-8 md:grid-flow-col">
+          {slice.items.map((item, index) => (
+            <ServiceCard key={index} item={item} />
           ))}
         </ul>
       </div>

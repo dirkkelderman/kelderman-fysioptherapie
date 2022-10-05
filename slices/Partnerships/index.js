@@ -49,8 +49,8 @@ const Partnerships = ({ slice }) => {
           </Heading>
         )}
         <ul className="grid grid-cols-3 gap-8 md:grid-cols-5">
-          {slice.items.map((item) => (
-            <PartnershipCard key={item.logo.url} item={item} />
+          {slice.items.map((item, index) => (
+            <PartnershipCard key={index} item={item} />
           ))}
         </ul>
       </div>
