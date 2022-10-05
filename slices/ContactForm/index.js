@@ -10,29 +10,70 @@ const ContactForm = ({ slice }) => {
     name: "",
     email: "",
     message: "",
+    errors: {},
   });
+
+  const validateForm = () => {
+    let errors = {};
+    let formIsValid = true;
+
+    if (!form.name) {
+      formIsValid = false;
+      errors["name"] = "*Vul uw naam in.";
+    }
+    if (form.name) {
+      if (!form.name.match(/^\w+$/)) {
+        formIsValid = false;
+        errors["name"] = "*Gebruik alleen letters.";
+      }
+    }
+    if (!form.email) {
+      formIsValid = false;
+      errors["email"] = "*Vul uw e-mailadres in.";
+    }
+    if (form.email) {
+      //regular expression for email validation
+      let pattern = new RegExp(
+        /^(('[\w-\s]+')|([\w-]+(?:\.[\w-]+)*)|('[\w-\s]+')([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i
+      );
+      if (!pattern.test(form.email)) {
+        formIsValid = false;
+        errors["email"] = "*Vul een geldig e-mailadres in.";
+      }
+    }
+    if (!form.message) {
+      formIsValid = false;
+      errors["message"] = "*Vul uw bericht in.";
+    }
+
+    setForm({ errors });
+    return formIsValid;
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    setFormLoading(true);
+    
+    if (validateForm()) {
+      setFormLoading(true);
+      fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      })
+        .then(setFormLoading(false), setFormSuccess(true))
+        .catch((err) => console.log(err));
 
-    fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(form),
-    })
-      .then(setFormLoading(false), setFormSuccess(true))
-      .catch((err) => console.log(err));
-
-    setForm({
-      name: "",
-      email: "",
-      message: "",
-    });
+      setForm({
+        name: "",
+        email: "",
+        message: "",
+        errors: {},
+      });
+    }
   };
 
   const handleChange = (e) => {
@@ -61,49 +102,55 @@ const ContactForm = ({ slice }) => {
               className="mt-2 bg-slate-100 p-1"
               type="text"
               name="name"
-              placeholder="Name"
+              placeholder="Naam"
               value={form.name}
               onChange={handleChange}
             />
+            <div className="errorMsg">{form.errors.name}</div>
+
             <input
               className="mt-2 bg-slate-100 p-1"
               type="email"
               name="email"
-              placeholder="Your email"
+              placeholder="Email"
               value={form.email}
               onChange={handleChange}
             />
+            <div className="errorMsg">{form.errors.email}</div>
+
             <textarea
               name="message"
               className="mt-2 resize-none bg-slate-100 p-1 "
               rows={4}
-              placeholder="Your message"
+              placeholder="Bericht"
               value={form.message}
               onChange={handleChange}
             />
+            <div className="errorMsg">{form.errors.message}</div>
+
             <div className="flex justify-end">
               {formLoading ? (
                 <button
                   type="button"
                   className="m-2 bg-[#183540] px-4 py-1 text-white"
-                  disabled
+                  disabled={formLoading}
                 >
-                  Sending...
+                  Verzenden...
                 </button>
               ) : (
                 <button
                   type="submit"
                   className="m-2 bg-[#183540] px-4 py-1 text-white"
                 >
-                  Email me
+                  Stuur email
                 </button>
               )}
             </div>
             <div>
               {formSuccess && (
                 <div className="flex flex-col items-center justify-center pt-8">
-                  <span>Thanks for your message!</span>
-                  <span>I will get back to you as soon as possible.</span>
+                  <span>Dank voor uw bericht!</span>
+                  <span>Ik neem zo snel mogelijk contact met u op.</span>
                 </div>
               )}
             </div>
