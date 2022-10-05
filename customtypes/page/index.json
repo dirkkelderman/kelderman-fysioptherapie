@@ -71,6 +71,9 @@
             },
             "review_cards": {
               "type": "SharedSlice"
+            },
+            "contact_form": {
+              "type": "SharedSlice"
             }
           }
         }

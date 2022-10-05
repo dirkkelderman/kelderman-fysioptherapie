@@ -1,0 +1,109 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "footer",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "sitemapHeading": [
+      {
+        "type": "paragraph",
+        "text": "Reprehenderit duis elit commodo ipsum ad quis fugiat cillum nisi sunt aliquip consectetur aliqua tempor. Exercitation elit laborum ex veniam dolore incididunt aliqua velit labore. Do elit adipisicing laborum et adipisicing nulla consequat sit.",
+        "spans": []
+      }
+    ],
+    "sitemap": [
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        },
+        "label": [
+          {
+            "type": "paragraph",
+            "text": "Mollit cupidatat adipisicing adipisicing culpa id ex sunt esse dolore. Fugiat sint pariatur proident commodo nulla consectetur laborum deserunt anim aliqua consectetur in.",
+            "spans": []
+          }
+        ]
+      }
+    ],
+    "locationsHeading": [
+      {
+        "type": "paragraph",
+        "text": "Occaecat exercitation veniam elit proident consequat exercitation culpa qui tempor ad nisi. Tempor occaecat nostrud sint consequat excepteur. Laboris officia occaecat sunt deserunt ea aute reprehenderit ipsum commodo.",
+        "spans": []
+      }
+    ],
+    "locations": [
+      {
+        "city": [
+          {
+            "type": "paragraph",
+            "text": "Reprehenderit laborum proident do consectetur do cillum dolore ex sunt.",
+            "spans": []
+          }
+        ],
+        "address": [
+          {
+            "type": "paragraph",
+            "text": "In aliqua exercitation id quis deserunt dolor fugiat esse officia ut incididunt excepteur officia ipsum. Sunt ullamco sit consequat amet.",
+            "spans": []
+          }
+        ]
+      }
+    ],
+    "contactHeading": [
+      {
+        "type": "paragraph",
+        "text": "Anim eiusmod cillum nulla in sit velit irure ad. Aliqua nisi commodo elit pariatur ad id esse consequat in incididunt id proident dolor do.",
+        "spans": []
+      }
+    ],
+    "contact": [
+      {
+        "email": [
+          {
+            "type": "paragraph",
+            "text": "Aliquip commodo est dolor ipsum mollit adipisicing esse aliquip deserunt. Non sit voluptate qui ut quis sit in deserunt voluptate elit laboris dolore nostrud ea adipisicing. Duis sunt incididunt Lorem elit incididunt consectetur in velit sit dolor magna ut.",
+            "spans": []
+          }
+        ],
+        "telephone": [
+          {
+            "type": "paragraph",
+            "text": "Amet voluptate esse do magna labore elit exercitation. Ullamco dolore et sint aliqua ex minim ut minim culpa aute elit.",
+            "spans": []
+          }
+        ]
+      }
+    ],
+    "socialsHeading": [
+      {
+        "type": "paragraph",
+        "text": "Quis do sit deserunt eu ex excepteur nisi velit et officia fugiat nisi laborum.",
+        "spans": []
+      }
+    ],
+    "socials": [
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        },
+        "label": [
+          {
+            "type": "paragraph",
+            "text": "Voluptate reprehenderit reprehenderit consectetur officia sit exercitation proident est in cupidatat cupidatat. Elit tempor sit duis esse cupidatat eiusmod do fugiat sint aute veniam qui. Aliqua quis laborum esse cupidatat labore mollit nulla adipisicing in.",
+            "spans": []
+          }
+        ]
+      }
+    ]
+  }
+}

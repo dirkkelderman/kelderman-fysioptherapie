@@ -120,6 +120,80 @@
         },
         "screenshotPaths": {}
       },
+      "contact_form": {
+        "library": "slices",
+        "id": "contact_form",
+        "name": "ContactForm",
+        "description": "ContactForm",
+        "model": {
+          "id": "contact_form",
+          "type": "SharedSlice",
+          "name": "ContactForm",
+          "description": "ContactForm",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "ContactForm",
+              "primary": {
+                "heading": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Heading",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "heading1"
+                  }
+                },
+                "text": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Text",
+                    "placeholder": "A nice description of your feature",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "heading": [
+                {
+                  "type": "heading1",
+                  "text": "Strike",
+                  "spans": []
+                }
+              ],
+              "text": [
+                {
+                  "type": "paragraph",
+                  "text": "Velit sunt consequat quis officia eu cupidatat excepteur magna irure sit. Laborum officia Lorem esse proident fugiat tempor aliquip voluptate ipsum tempor cupidatat culpa exercitation nostrud.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "contact_form"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
       "hero": {
         "library": "slices",
         "id": "hero",
