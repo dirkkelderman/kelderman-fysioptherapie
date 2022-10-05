@@ -6,13 +6,13 @@ import { Bounded } from "../../components/Bounded";
 import { Heading } from "../../components/Heading";
 import { ConditionalWrap } from "../../components/ConditionalWrap";
 
-const TestimonialCard = ({ item }) => {
+const ReviewCard = ({ item }) => {
   const image = item.image;
 
   return (
     <li className="grid gap-8">
       {prismicH.isFilled.image(image) && (
-        <div className="">
+        <div className="bg-gray-100 ">
           <ConditionalWrap
             condition={prismicH.isFilled.link(item.buttonLink)}
             wrap={({ children }) => (
@@ -21,27 +21,19 @@ const TestimonialCard = ({ item }) => {
               </PrismicLink>
             )}
           >
-            <PrismicNextImage
-              field={image}
-              layout="responsive"
-              className="rounded-full"
-            />
+            <PrismicNextImage field={image} layout="responsive" className="" />
           </ConditionalWrap>
         </div>
       )}
       <div className="leading-relaxed">
         <PrismicRichText field={item.text} />
       </div>
-      <div>
-        {prismicH.isFilled.keyText(item.source) && (
-            <figcaption className="text-right">
-              &mdash; {item.source}
-            </figcaption>
-          )}
-      </div>
       {prismicH.isFilled.link(item.buttonLink) && (
         <div>
-          <PrismicLink field={item.buttonLink} className="font-semibold">
+          <PrismicLink
+            field={item.buttonLink}
+            className="rounded bg-[#183540] px-5 py-3 font-semibold text-white"
+          >
             {item.buttonText || "More Info"}
           </PrismicLink>
         </div>
@@ -50,18 +42,23 @@ const TestimonialCard = ({ item }) => {
   );
 };
 
-const Testimonials = ({ slice }) => {
+const ReviewCards = ({ slice }) => {
   return (
     <Bounded as="section" className="bg-white">
-      <div className="grid gap-12">
+      <div className="grid w-full items-center justify-center gap-12">
         {prismicH.isFilled.richText(slice.primary.heading) && (
           <Heading className="text-center">
             <PrismicText field={slice.primary.heading} />
           </Heading>
         )}
-        <ul className="grid grid-cols-2 gap-8 md:grid-cols-4">
+        {prismicH.isFilled.richText(slice.primary.description) && (
+          <div className="max-w-lg text-center">
+            <PrismicText field={slice.primary.description} />
+          </div>
+        )}
+        <ul className="grid gap-8 lg:grid-cols-2">
           {slice.items.map((item) => (
-            <TestimonialCard key={item.image.url} item={item} />
+            <ReviewCard key={item.image.url} item={item} />
           ))}
         </ul>
       </div>
@@ -69,4 +66,4 @@ const Testimonials = ({ slice }) => {
   );
 };
 
-export default Testimonials;
+export default ReviewCards;

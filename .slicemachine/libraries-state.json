@@ -79,14 +79,14 @@
               "heading": [
                 {
                   "type": "heading1",
-                  "text": "Honor",
+                  "text": "Gradually",
                   "spans": []
                 }
               ],
               "text": [
                 {
                   "type": "paragraph",
-                  "text": "Pariatur aliquip minim occaecat reprehenderit tempor amet.",
+                  "text": "Amet deserunt nulla voluptate duis.",
                   "spans": []
                 }
               ],
@@ -97,16 +97,16 @@
                 },
                 "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2"
+                "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613"
               },
               "ctaLink": {
                 "link_type": "Web",
-                "url": "https://slicemachine.dev"
+                "url": "https://prismic.io"
               },
               "ctaText": [
                 {
                   "type": "paragraph",
-                  "text": "Sunt deserunt cillum duis est reprehenderit id officia irure do enim amet. Amet irure elit dolor nostrud eiusmod esse incididunt tempor.",
+                  "text": "Excepteur exercitation dolor non id sit consequat veniam exercitation laborum exercitation anim amet proident nisi. Qui minim magna incididunt nulla voluptate consequat et consequat duis aliquip. Qui nostrud anim adipisicing do anim amet ut Lorem est elit excepteur consequat in consectetur.",
                   "spans": []
                 }
               ]
@@ -797,6 +797,114 @@
             "height": 392
           }
         }
+      },
+      "review_cards": {
+        "library": "slices",
+        "id": "review_cards",
+        "name": "ReviewCards",
+        "description": "ReviewCards",
+        "model": {
+          "id": "review_cards",
+          "type": "SharedSlice",
+          "name": "ReviewCards",
+          "description": "ReviewCards",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "ReviewCards",
+              "primary": {
+                "heading": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Heading",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "heading1"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                }
+              },
+              "items": {
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "text": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Text",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04"
+                },
+                "text": [
+                  {
+                    "type": "paragraph",
+                    "text": "Anim voluptate ea id cillum reprehenderit. Dolore velit dolore non sint culpa eiusmod proident occaecat. Ut aliquip qui eu.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {
+              "heading": [
+                {
+                  "type": "heading1",
+                  "text": "Light",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Sunt sunt excepteur consectetur ut et in ipsum aliqua consectetur laborum occaecat amet deserunt id voluptate. Velit cupidatat ex labore eiusmod elit cillum pariatur in nulla qui labore tempor laborum sunt laborum. Non consectetur sunt aute aliquip ut ut cupidatat commodo labore ut incididunt cillum culpa pariatur ad.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "review_cards"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
       },
       "services": {
         "library": "slices",

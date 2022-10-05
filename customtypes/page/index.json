@@ -65,6 +65,12 @@
             },
             "partnerships": {
               "type": "SharedSlice"
+            },
+            "call_to_action": {
+              "type": "SharedSlice"
+            },
+            "review_cards": {
+              "type": "SharedSlice"
             }
           }
         }

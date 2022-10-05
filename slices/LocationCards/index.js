@@ -12,7 +12,6 @@ const LocationCard = ({ item }) => {
   return (
     <li className="flex w-full justify-center">
       <div className="w-full p-10">
-        
         {prismicH.isFilled.image(image) && (
           <div className="bg-gray-100">
             <ConditionalWrap
@@ -27,7 +26,7 @@ const LocationCard = ({ item }) => {
             </ConditionalWrap>
           </div>
         )}
-        <div className="leading-relaxed pt-10">
+        <div className="pt-10 leading-relaxed">
           <PrismicRichText field={item.text} />
         </div>
         {prismicH.isFilled.link(item.buttonLink) && (
