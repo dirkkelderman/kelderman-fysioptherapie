@@ -14,7 +14,7 @@
     "title": [
       {
         "type": "heading1",
-        "text": "Cabin",
+        "text": "Society",
         "spans": []
       }
     ],
@@ -28,6 +28,32 @@
       "first_publication_date": "1970-01-01T00:00:01+0000",
       "last_publication_date": "1970-01-01T01:00:00+0000"
     },
-    "slices": []
+    "slices": [],
+    "socialCardTitle": [
+      {
+        "type": "paragraph",
+        "text": "In enim tempor aliqua nisi ex sit minim fugiat sunt labore. Ad est aute deserunt tempor non ullamco ut elit qui ullamco nisi ipsum nisi. Anim voluptate duis in pariatur aliquip laborum est dolore ea velit anim.",
+        "spans": []
+      }
+    ],
+    "socialCardDescription": [
+      {
+        "type": "paragraph",
+        "text": "Nulla incididunt aliquip deserunt nulla consectetur id commodo aliquip. Nostrud amet culpa adipisicing elit anim do. Enim Lorem nulla pariatur ipsum ut pariatur id velit cillum.",
+        "spans": []
+      }
+    ],
+    "socialCardImage": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b"
+    },
+    "slices1": [],
+    "metaTitle": "had",
+    "metaDescription": "book"
   }
 }

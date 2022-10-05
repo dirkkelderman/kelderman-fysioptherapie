@@ -7,6 +7,7 @@ import { components } from "../slices";
 import { Layout } from "../components/Layout";
 
 const Page = ({ page, navigation, settings, footer }) => {
+  console.log(page);
   return (
     <Layout navigation={navigation} settings={settings} footer={footer}>
       <Head>
@@ -14,6 +15,24 @@ const Page = ({ page, navigation, settings, footer }) => {
           {prismicH.asText(page.data.title)} |{" "}
           {prismicH.asText(settings.data.siteTitle)}
         </title>
+        <meta name="description" content={page.data.metaDescription} />
+
+        <meta
+          property="og:title"
+          content={
+            prismicH.asText(page.data.socialCardTitle) |
+            prismicH.asText(settings.data.siteTitle)
+          }
+        />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={page.data?.url} />
+        <meta property="og:image" content={page.data?.socialCardImage?.url} />
+        <meta
+          property="og:description"
+          content={prismicH.asText(page.data?.socialCardDescription)}
+        />
+        <meta property="og:site_name" content="Kelderman Fysiotherapie" />
+        <meta property="fb:admins" content="Facebook numeric ID" />
       </Head>
       <SliceZone slices={page.data.slices} components={components} />
     </Layout>

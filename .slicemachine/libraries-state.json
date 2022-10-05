@@ -1093,6 +1093,84 @@
         },
         "screenshotPaths": {}
       },
+      "social_cards": {
+        "library": "slices",
+        "id": "social_cards",
+        "name": "SocialCards",
+        "description": "SocialCards",
+        "model": {
+          "id": "social_cards",
+          "type": "SharedSlice",
+          "name": "SocialCards",
+          "description": "SocialCards",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "SocialCards",
+              "primary": {
+                "title": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": ""
+                  }
+                },
+                "description": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": ""
+                  }
+                },
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Image",
+                    "constraint": {
+                      "width": 1200,
+                      "height": 650
+                    },
+                    "thumbnails": []
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": "pipe",
+              "description": "signal",
+              "image": {
+                "dimensions": {
+                  "width": 1200,
+                  "height": 650
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1585399000684-d2f72660f092"
+              }
+            },
+            "slice_type": "social_cards"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
       "testimonials": {
         "library": "slices",
         "id": "testimonials",

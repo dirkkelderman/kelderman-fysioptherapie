@@ -10,6 +10,7 @@ import Partnerships from './Partnerships';
 import Quote from './Quote';
 import ReviewCards from './ReviewCards';
 import ServicesCards from './ServicesCards';
+import SocialCards from './SocialCards';
 import Testimonials from './Testimonials';
 import Text from './Text';
 import TextWithImage from './TextWithImage';
@@ -25,6 +26,7 @@ export {
 	Quote,
 	ReviewCards,
 	ServicesCards,
+	SocialCards,
 	Testimonials,
 	Text,
 	TextWithImage,
@@ -41,6 +43,7 @@ export const components = {
 	quote: Quote,
 	review_cards: ReviewCards,
 	services: ServicesCards,
+	social_cards: SocialCards,
 	testimonials: Testimonials,
 	text: Text,
 	text_with_image: TextWithImage,
