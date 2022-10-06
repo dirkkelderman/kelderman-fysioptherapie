@@ -13,6 +13,17 @@
           "allowTargetBlank": false,
           "single": "heading1"
         }
+      },
+      "logo": {
+        "type": "Image",
+        "config": {
+          "label": "Logo",
+          "constraint": {
+            "width": 30,
+            "height": 30
+          },
+          "thumbnails": []
+        }
       }
     }
   }
