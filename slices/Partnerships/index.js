@@ -6,6 +6,8 @@ import { Bounded } from "../../components/Bounded";
 import { Heading } from "../../components/Heading";
 import { ConditionalWrap } from "../../components/ConditionalWrap";
 
+import Carousel from "better-react-carousel";
+
 const PartnershipCard = ({ item }) => {
   const image = item.logo;
 
@@ -21,11 +23,15 @@ const PartnershipCard = ({ item }) => {
               </PrismicLink>
             )}
           >
-            <PrismicNextImage field={image} layout="responsive" className="rounded-full" />
+            <PrismicNextImage
+              field={image}
+              layout="responsive"
+              className="rounded-full"
+            />
           </ConditionalWrap>
         </div>
       )}
-      <div className="leading-relaxed text-center">
+      <div className="text-center leading-relaxed">
         <PrismicRichText field={item.partnership} />
       </div>
       {prismicH.isFilled.link(item.buttonLink) && (
@@ -48,14 +54,21 @@ const Partnerships = ({ slice }) => {
             <PrismicText field={slice.primary.heading} />
           </Heading>
         )}
-        <ul className="grid grid-cols-3 gap-8 md:grid-cols-5">
-          {slice.items.map((item, index) => (
+        <ul className="">
+          <Carousel cols={4} rows={1} gap={10} loop autoplay>
+            {slice.items.map((item, index) => (
+              <Carousel.Item key={index}>
+                <PartnershipCard  item={item} />
+              </Carousel.Item>
+            ))}
+          </Carousel>
+          {/* {slice.items.map((item, index) => (
             <PartnershipCard key={index} item={item} />
-          ))}
+          ))} */}
         </ul>
       </div>
     </Bounded>
   );
 };
 
-export default Partnerships
+export default Partnerships;
