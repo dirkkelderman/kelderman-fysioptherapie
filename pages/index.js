@@ -26,6 +26,9 @@ export async function getStaticProps({ locale, previewData }) {
   const navigation = await client.getSingle("navigation", { lang: locale });
   const settings = await client.getSingle("settings", { lang: locale });
   const footer = await client.getSingle("footer", { lang: locale });
+  // const services = await client.getByTag("diensten", { lang: locale });
+
+  // console.log(services.links)
 
   return {
     props: {

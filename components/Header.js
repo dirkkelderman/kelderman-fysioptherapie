@@ -9,7 +9,7 @@ export const Header = ({ navigation, settings }) => {
   const image = settings.data.logo;
   return (
     <Bounded as="header" yPadding="xs">
-      <div className="flex flex-wrap items-baseline justify-center lg:justify-between gap-x-6 gap-y-3 leading-none">
+      <div className="flex flex-wrap items-baseline justify-center gap-x-6 gap-y-3 leading-none lg:justify-between">
         <PrismicLink href="/" className=" text-xl font-semibold tracking-tight">
           <div className="flex items-center">
             <div className="px-3">
