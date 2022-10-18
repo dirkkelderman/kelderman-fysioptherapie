@@ -43,7 +43,6 @@ const ServiceCard = ({ item }) => {
 };
 
 const ServicesCards = ({ slice }) => {
-  console.log(slice);
   return (
     <Bounded as="section" className="bg-white">
       <div className="grid gap-12">

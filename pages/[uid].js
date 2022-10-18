@@ -7,7 +7,6 @@ import { components } from "../slices";
 import { Layout } from "../components/Layout";
 
 const Page = ({ page, navigation, settings, footer }) => {
-  console.log(page);
   return (
     <Layout navigation={navigation} settings={settings} footer={footer}>
       <Head>
