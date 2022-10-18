@@ -12,7 +12,7 @@ const PartnershipCard = ({ item }) => {
   const image = item.logo;
 
   return (
-    <li className="grid gap-8">
+    <li className="grid lg:gap-8">
       {prismicH.isFilled.image(image) && (
         <div className="">
           <ConditionalWrap
@@ -54,18 +54,13 @@ const Partnerships = ({ slice }) => {
             <PrismicText field={slice.primary.heading} />
           </Heading>
         )}
-        <ul className="">
-          <Carousel cols={4} rows={1} gap={10} loop autoplay>
-            {slice.items.map((item, index) => (
-              <Carousel.Item key={index}>
-                <PartnershipCard  item={item} />
-              </Carousel.Item>
-            ))}
-          </Carousel>
-          {/* {slice.items.map((item, index) => (
-            <PartnershipCard key={index} item={item} />
-          ))} */}
-        </ul>
+        <Carousel cols={4} rows={1} gap={8} loop autoplay>
+          {slice.items.map((item, index) => (
+            <Carousel.Item key={index}>
+              <PartnershipCard item={item} />
+            </Carousel.Item>
+          ))}
+        </Carousel>
       </div>
     </Bounded>
   );
