@@ -30,7 +30,7 @@ const ImageCard = ({ item }) => {
       </div>
       {prismicH.isFilled.link(item.buttonLink) && (
         <div>
-          <PrismicLink field={item.buttonLink} className="font-semibold">
+          <PrismicLink field={item.buttonLink} className="font-semibold hover:underline underline-offset-8">
             {item.buttonText || "More Info"}
           </PrismicLink>
         </div>

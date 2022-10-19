@@ -27,7 +27,7 @@ const CallToAction = ({ slice }) => {
           className="pointer-events-none select-none object-cover opacity-40"
         />
       )}
-      <Bounded yPadding="sm" className="relative">
+      <Bounded yPadding="base" className="relative">
         <div className="grid justify-items-center gap-8">
           <div className="max-w-2xl text-center">
             <PrismicRichText
