@@ -37,7 +37,7 @@ const ServiceCard = ({ item }) => {
           <div className="mb-2">
             <PrismicLink
               field={item.buttonLink}
-              className="rounded bg-[#183540] px-5 py-3 font-semibold text-white"
+              className="rounded border-2 border-[#183540] hover:bg-[#183540] px-5 py-2 font-semibold text-[#183540] hover:text-white"
             >
               {item.buttonText || "Meer info"}
             </PrismicLink>

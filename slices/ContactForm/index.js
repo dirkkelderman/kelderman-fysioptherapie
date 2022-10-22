@@ -22,7 +22,7 @@ const ContactForm = ({ slice }) => {
       errors["name"] = "*Vul uw naam in.";
     }
     if (form.name) {
-      if (!form.name.match(/^\w+$/)) {
+      if (!form.name.match(/^[a-zA-Z0-9_ ]*$/)) {
         formIsValid = false;
         errors["name"] = "*Gebruik alleen letters.";
       }
@@ -53,7 +53,6 @@ const ContactForm = ({ slice }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    
     if (validateForm()) {
       setFormLoading(true);
       fetch("/api/contact", {
@@ -64,15 +63,17 @@ const ContactForm = ({ slice }) => {
         },
         body: JSON.stringify(form),
       })
-        .then(setFormLoading(false), setFormSuccess(true))
+        .then(
+          setFormLoading(false),
+          setFormSuccess(true),
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+            errors: {},
+          })
+        )
         .catch((err) => console.log(err));
-
-      setForm({
-        name: "",
-        email: "",
-        message: "",
-        errors: {},
-      });
     }
   };
 
