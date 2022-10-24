@@ -1,11 +1,18 @@
 import clsx from "clsx";
 
+interface CompProps {
+  as: React.ElementType;
+  size?: string;
+  children: React.ReactNode;
+  className?: string;
+}
+
 export const Heading = ({
   as: Comp = "h1",
   size = "lg",
   children,
   className,
-}) => {
+}: CompProps) => {
   return (
     <Comp
       className={clsx(

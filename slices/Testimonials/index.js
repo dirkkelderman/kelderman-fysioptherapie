@@ -34,10 +34,8 @@ const TestimonialCard = ({ item }) => {
       </div>
       <div>
         {prismicH.isFilled.keyText(item.source) && (
-            <figcaption className="text-right">
-              &mdash; {item.source}
-            </figcaption>
-          )}
+          <figcaption className="text-right">&mdash; {item.source}</figcaption>
+        )}
       </div>
       {prismicH.isFilled.link(item.buttonLink) && (
         <div>

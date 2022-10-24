@@ -218,6 +218,12 @@
             "blocks": 1
           }
         }
+      },
+      "locationsHeading": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
       }
     }
   }

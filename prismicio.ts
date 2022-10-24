@@ -1,12 +1,8 @@
 import * as prismic from "@prismicio/client";
-import * as prismicH from "@prismicio/helpers";
+// import * as prismicH from "@prismicio/helpers";
 import * as prismicNext from "@prismicio/next";
-
 import sm from "./sm.json";
 
-/**
- * The project's Prismic repository name.
- */
 export const repositoryName = prismic.getRepositoryName(sm.apiEndpoint);
 
 /**
@@ -21,26 +17,21 @@ export const linkResolver = (doc) => {
   }
 };
 
-/**
- * Creates a Prismic client for the project's repository. The client is used to
- * query content from the Prismic API.
- *
- * @param config {prismicNext.CreateClientConfig} - A configuration object to
- */
-export const createClient = (config = {}) => {
+export function createClient({
+  previewData,
+  req,
+  ...config
+}: prismicNext.CreateClientConfig = {}) {
   const client = prismic.createClient(sm.apiEndpoint, {
     routes: [
       { type: "page", path: "/:uid" },
       { type: "settings", path: "/" },
       { type: "navigation", path: "/" },
+      { type: "footer", path: "/" },
     ],
   });
 
-  prismicNext.enableAutoPreviews({
-    client,
-    previewData: config.previewData,
-    req: config.req,
-  });
+  prismicNext.enableAutoPreviews({ client, previewData, req });
 
   return client;
-};
+}

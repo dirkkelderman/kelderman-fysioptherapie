@@ -2,7 +2,6 @@ import { PrismicLink, PrismicText } from "@prismicio/react";
 import * as prismicH from "@prismicio/helpers";
 
 import { Bounded } from "./Bounded";
-import { PrismicNextImage } from "@prismicio/next";
 import Image from "next/image";
 
 export const Header = ({ navigation, settings }) => {
@@ -12,7 +11,7 @@ export const Header = ({ navigation, settings }) => {
       <div className="flex flex-wrap items-baseline justify-center gap-x-6 gap-y-3 leading-none lg:justify-between">
         <PrismicLink href="/" className=" text-xl font-semibold tracking-tight">
           <div className="flex items-center">
-            <div className="px-3">
+            <div className="flex items-center px-3">
               <Image
                 src={image.url}
                 alt={image.alt}

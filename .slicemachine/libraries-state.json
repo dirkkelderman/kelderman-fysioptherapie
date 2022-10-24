@@ -1017,6 +1017,15 @@
                     "allowTargetBlank": true,
                     "single": "heading1"
                   }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
                 }
               },
               "items": {
@@ -1070,27 +1079,34 @@
                   },
                   "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482"
+                  "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055"
                 },
                 "text": [
                   {
                     "type": "paragraph",
-                    "text": "Laborum ad aliquip sint eiusmod quis. Quis et mollit incididunt nisi amet sit tempor quis laboris. Qui culpa culpa nisi ad.",
+                    "text": "Tempor elit consequat nulla velit.",
                     "spans": []
                   }
                 ],
                 "buttonLink": {
                   "link_type": "Web",
-                  "url": "https://prismic.io"
+                  "url": "http://twitter.com"
                 },
-                "buttonText": "blank"
+                "buttonText": "too"
               }
             ],
             "primary": {
               "heading": [
                 {
                   "type": "heading1",
-                  "text": "Rather",
+                  "text": "Goose",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Minim laboris consequat minim est aliqua magna aliquip. Magna nulla ea deserunt magna nulla ut esse reprehenderit cupidatat veniam velit. Sit laboris non sunt incididunt minim officia amet pariatur id consectetur magna dolore sint.",
                   "spans": []
                 }
               ]
