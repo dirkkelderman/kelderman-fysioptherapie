@@ -22,7 +22,7 @@ const AccordionItem = ({ itemHeader, itemContent, index }) => {
   const [selected, setSelected] = useState(null);
 
   return (
-    <div className="w-2/3 py-3">
+    <div className="w-full md:w-2/3 py-3">
       <button
         className="flex w-full items-center justify-between rounded border-[1px] border-slate-400 p-2"
         onClick={() => setSelected(!selected)}
