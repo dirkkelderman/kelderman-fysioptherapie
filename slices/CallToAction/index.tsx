@@ -1,7 +1,6 @@
 import * as prismicH from "@prismicio/helpers";
 import { PrismicLink, PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
-
 import { Bounded } from "../../components/Bounded";
 import { Heading } from "../../components/Heading";
 

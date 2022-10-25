@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { SliceZone } from "@prismicio/react";
 import * as prismicH from "@prismicio/helpers";
-import type { Content } from "@prismicio/client";
 
 import { createClient } from "../prismicio";
 import { components } from "../slices";
@@ -47,7 +46,7 @@ export async function getStaticProps({ params, locale, previewData }) {
   const page = await client.getByUID("page", params.uid, { lang: locale });
   const navigation = await client.getSingle("navigation", { lang: locale });
   const settings = await client.getSingle("settings", { lang: locale });
-  const footer = await client.getSingle<Content.MenuItemDocument>("footer", { lang: locale });
+  const footer = await client.getSingle("footer", { lang: locale });
 
   return {
     props: {

@@ -367,7 +367,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = HeroSlice | QuoteSlice | TextSlice | ImageSlice | ImageCardsSlice | TextWithImageSlice | ServicesSlice | LocationCardsSlice | TestimonialsSlice | PartnershipsSlice | CallToActionSlice | ReviewCardsSlice | ContactFormSlice;
+type PageDocumentDataSlicesSlice = HeroSlice | QuoteSlice | TextSlice | ImageSlice | ImageCardsSlice | TextWithImageSlice | ServicesSlice | LocationCardsSlice | TestimonialsSlice | PartnershipsSlice | CallToActionSlice | ReviewCardsSlice | ContactFormSlice | AccordionSlice;
 /**
  * Slice for *Page → Slice Zone*
  *
@@ -419,6 +419,81 @@ interface SettingsDocumentData {
  */
 export type SettingsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<SettingsDocumentData>, "settings", Lang>;
 export type AllDocumentTypes = FooterDocument | NavigationDocument | PageDocument | SettingsDocument;
+/**
+ * Primary content in Accordion → Primary
+ *
+ */
+interface AccordionSliceDefaultPrimary {
+    /**
+     * Heading field in *Accordion → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: accordion.primary.heading
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    heading: prismicT.TitleField;
+    /**
+     * Description field in *Accordion → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: accordion.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+}
+/**
+ * Item in Accordion → Items
+ *
+ */
+export interface AccordionSliceDefaultItem {
+    /**
+     * Item Header field in *Accordion → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: accordion.items[].itemHeader
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    itemHeader: prismicT.RichTextField;
+    /**
+     * Item Content field in *Accordion → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: accordion.items[].itemContent
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    itemContent: prismicT.RichTextField;
+}
+/**
+ * Default variation for Accordion Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Accordion`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type AccordionSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<AccordionSliceDefaultPrimary>, Simplify<AccordionSliceDefaultItem>>;
+/**
+ * Slice variation for *Accordion*
+ *
+ */
+type AccordionSliceVariation = AccordionSliceDefault;
+/**
+ * Accordion Shared Slice
+ *
+ * - **API ID**: `accordion`
+ * - **Description**: `Accordion`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type AccordionSlice = prismicT.SharedSlice<"accordion", AccordionSliceVariation>;
 /**
  * Primary content in CallToAction → Primary
  *
@@ -1486,6 +1561,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FooterDocumentData, FooterDocumentDataSitemapItem, FooterDocumentDataLocationsItem, FooterDocumentDataContactItem, FooterDocumentDataSocialsItem, FooterDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocumentDataSlices1Slice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, CallToActionSliceDefaultPrimary, CallToActionSliceDefault, CallToActionSliceVariation, CallToActionSlice, ContactFormSliceDefaultPrimary, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceBannerPrimary, ImageSliceBanner, ImageSliceVariation, ImageSlice, ImageCardsSliceDefaultPrimary, ImageCardsSliceDefaultItem, ImageCardsSliceDefault, ImageCardsSliceVariation, ImageCardsSlice, LocationCardsSliceDefaultPrimary, LocationCardsSliceDefaultItem, LocationCardsSliceDefault, LocationCardsSliceVariation, LocationCardsSlice, PartnershipsSliceDefaultPrimary, PartnershipsSliceDefaultItem, PartnershipsSliceDefault, PartnershipsSliceVariation, PartnershipsSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, ReviewCardsSliceDefaultPrimary, ReviewCardsSliceDefaultItem, ReviewCardsSliceDefault, ReviewCardsSliceVariation, ReviewCardsSlice, ServicesSliceDefaultPrimary, ServicesSliceDefaultItem, ServicesSliceDefault, ServicesSliceVariation, ServicesSlice, SocialCardsSliceDefaultPrimary, SocialCardsSliceDefault, SocialCardsSliceVariation, SocialCardsSlice, TestimonialsSliceDefaultPrimary, TestimonialsSliceDefaultItem, TestimonialsSliceDefault, TestimonialsSliceVariation, TestimonialsSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceTwoColumnsPrimary, TextSliceTwoColumns, TextSliceVariation, TextSlice, TextWithImageSliceDefaultPrimary, TextWithImageSliceDefault, TextWithImageSliceWithButtonPrimary, TextWithImageSliceWithButton, TextWithImageSliceTextRightPrimary, TextWithImageSliceTextRight, TextWithImageSliceVariation, TextWithImageSlice };
+        export type { FooterDocumentData, FooterDocumentDataSitemapItem, FooterDocumentDataLocationsItem, FooterDocumentDataContactItem, FooterDocumentDataSocialsItem, FooterDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocumentDataSlices1Slice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, AccordionSliceDefaultPrimary, AccordionSliceDefaultItem, AccordionSliceDefault, AccordionSliceVariation, AccordionSlice, CallToActionSliceDefaultPrimary, CallToActionSliceDefault, CallToActionSliceVariation, CallToActionSlice, ContactFormSliceDefaultPrimary, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceBannerPrimary, ImageSliceBanner, ImageSliceVariation, ImageSlice, ImageCardsSliceDefaultPrimary, ImageCardsSliceDefaultItem, ImageCardsSliceDefault, ImageCardsSliceVariation, ImageCardsSlice, LocationCardsSliceDefaultPrimary, LocationCardsSliceDefaultItem, LocationCardsSliceDefault, LocationCardsSliceVariation, LocationCardsSlice, PartnershipsSliceDefaultPrimary, PartnershipsSliceDefaultItem, PartnershipsSliceDefault, PartnershipsSliceVariation, PartnershipsSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, ReviewCardsSliceDefaultPrimary, ReviewCardsSliceDefaultItem, ReviewCardsSliceDefault, ReviewCardsSliceVariation, ReviewCardsSlice, ServicesSliceDefaultPrimary, ServicesSliceDefaultItem, ServicesSliceDefault, ServicesSliceVariation, ServicesSlice, SocialCardsSliceDefaultPrimary, SocialCardsSliceDefault, SocialCardsSliceVariation, SocialCardsSlice, TestimonialsSliceDefaultPrimary, TestimonialsSliceDefaultItem, TestimonialsSliceDefault, TestimonialsSliceVariation, TestimonialsSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceTwoColumnsPrimary, TextSliceTwoColumns, TextSliceVariation, TextSlice, TextWithImageSliceDefaultPrimary, TextWithImageSliceDefault, TextWithImageSliceWithButtonPrimary, TextWithImageSliceWithButton, TextWithImageSliceTextRightPrimary, TextWithImageSliceTextRight, TextWithImageSliceVariation, TextWithImageSlice };
     }
 }

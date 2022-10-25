@@ -74,6 +74,9 @@
             },
             "contact_form": {
               "type": "SharedSlice"
+            },
+            "accordion": {
+              "type": "SharedSlice"
             }
           }
         }

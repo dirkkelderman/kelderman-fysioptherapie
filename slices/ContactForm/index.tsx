@@ -3,14 +3,29 @@ import { PrismicRichText } from "@prismicio/react";
 
 import { Bounded } from "../../components/Bounded";
 
+interface ContactFormProps {
+  name: string;
+  email: string;
+  message: string;
+  errors?: {
+    name: string;
+    email: string;
+    message: string;
+  };
+}
+
 const ContactForm = ({ slice }) => {
   const [formLoading, setFormLoading] = useState(false);
   const [formSuccess, setFormSuccess] = useState(false);
-  const [form, setForm] = useState({
+  const [form, setForm] = useState<ContactFormProps>({
     name: "",
     email: "",
     message: "",
-    errors: {},
+    errors: {
+      name: "",
+      email: "",
+      message: "",
+    },
   });
 
   const validateForm = () => {

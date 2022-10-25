@@ -1,7 +1,7 @@
 import clsx from "clsx";
 
 interface CompProps {
-  as: React.ElementType;
+  as?: React.ElementType;
   yPadding?: string;
   collapsible?: boolean;
   className?: string;
