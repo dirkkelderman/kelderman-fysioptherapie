@@ -3,16 +3,16 @@ import { PrismicRichText } from "@prismicio/react";
 
 import { Bounded } from "../../components/Bounded";
 
-interface ContactFormProps {
-  name: string;
-  email: string;
-  message: string;
-  errors?: {
-    name: string;
-    email: string;
-    message: string;
-  };
-}
+// interface ContactFormProps {
+//   name: string;
+//   email: string;
+//   message: string;
+//   errors?: {
+//     name: string;
+//     email: string;
+//     message: string;
+//   }
+// }
 
 const ContactForm = ({ slice }) => {
   const [formLoading, setFormLoading] = useState(false);

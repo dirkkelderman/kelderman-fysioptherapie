@@ -57,6 +57,7 @@ const ServicesCards = ({ slice }) => {
             <PrismicText field={slice.primary.heading} />
           </Heading>
         )}
+        <PrismicRichText field={slice.primary.description} />
         <ul className="grid auto-cols-[minmax(3,4)] gap-4 md:grid-flow-col ">
           {slice.items.map((item, index) => (
             <ServiceCard key={index} item={item} />
