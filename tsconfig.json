@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "slices/ContactForm/index.jsx"  ],
+, "slices/ContactForm/index.jsx", "pages/[uid].jsx"  ],
   "exclude": [
     "node_modules"
   ]
