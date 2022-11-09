@@ -106,7 +106,13 @@
           "fileName": "index",
           "extension": "tsx"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/dirk/Development/Projects/kelderman-fysiotherapie/.slicemachine/assets/slices/Accordion/default/preview.png",
+            "width": 800,
+            "height": 306
+          }
+        }
       },
       "call_to_action": {
         "library": "slices",
@@ -226,7 +232,13 @@
           "fileName": "index",
           "extension": "tsx"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/dirk/Development/Projects/kelderman-fysiotherapie/.slicemachine/assets/slices/CallToAction/default/preview.png",
+            "width": 800,
+            "height": 456
+          }
+        }
       },
       "contact_form": {
         "library": "slices",
@@ -298,7 +310,7 @@
         },
         "meta": {
           "fileName": "index",
-          "extension": "tsx"
+          "extension": "jsx"
         },
         "screenshotPaths": {}
       },
@@ -825,7 +837,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/dirk/Development/Projects/kelderman-fysiotherapie/.slicemachine/assets/slices/LocationCards/default/preview.png",
+            "width": 800,
+            "height": 927
+          }
+        }
       },
       "partnerships": {
         "library": "slices",
@@ -918,7 +936,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/dirk/Development/Projects/kelderman-fysiotherapie/.slicemachine/assets/slices/Partnerships/default/preview.png",
+            "width": 800,
+            "height": 636
+          }
+        }
       },
       "quote": {
         "library": "slices",
@@ -1096,7 +1120,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/dirk/Development/Projects/kelderman-fysiotherapie/.slicemachine/assets/slices/ReviewCards/default/preview.png",
+            "width": 800,
+            "height": 1002
+          }
+        }
       },
       "services": {
         "library": "slices",
@@ -1225,7 +1255,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/dirk/Development/Projects/kelderman-fysiotherapie/.slicemachine/assets/slices/ServicesCards/default/preview.png",
+            "width": 800,
+            "height": 1034
+          }
+        }
       },
       "social_cards": {
         "library": "slices",
