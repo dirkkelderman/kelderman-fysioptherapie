@@ -17,7 +17,7 @@ import { Bounded } from "../../components/Bounded";
 const ContactForm = ({ slice }) => {
   const [formLoading, setFormLoading] = useState(false);
   const [formSuccess, setFormSuccess] = useState(false);
-  const [form, setForm] = useState<ContactFormProps>({
+  const [form, setForm] = useState({
     name: "",
     email: "",
     message: "",

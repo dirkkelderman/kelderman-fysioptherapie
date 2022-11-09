@@ -3,6 +3,7 @@ module.exports = {
     "./pages/**/*.js",
     "./components/**/*.js",
     "./slices/**/*.js",
+    "./slices/**/*.jsx",
     "./pages/**/*.tsx",
     "./components/**/*.tsx",
     "./slices/**/*.tsx",
