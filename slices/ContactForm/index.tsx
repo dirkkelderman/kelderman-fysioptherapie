@@ -3,6 +3,11 @@ import { PrismicRichText } from "@prismicio/react";
 
 import { Bounded } from "../../components/Bounded";
 
+import type { Content } from "@prismicio/client";
+import type { SliceComponentProps } from "@prismicio/react";
+
+export type ContactFormProps = SliceComponentProps<Content.ContactFormSlice>;
+
 // interface ContactFormProps {
 //   name: string;
 //   email: string;
@@ -14,7 +19,7 @@ import { Bounded } from "../../components/Bounded";
 //   }
 // }
 
-const ContactForm = ({ slice }) => {
+const ContactForm = ({ slice }: ContactFormProps) => {
   const [formLoading, setFormLoading] = useState(false);
   const [formSuccess, setFormSuccess] = useState(false);
   const [form, setForm] = useState({
@@ -29,7 +34,11 @@ const ContactForm = ({ slice }) => {
   });
 
   const validateForm = () => {
-    let errors = {};
+    let errors = {
+      name: "",
+      email: "",
+      message: "",
+    };
     let formIsValid = true;
 
     if (!form.name) {
@@ -61,34 +70,49 @@ const ContactForm = ({ slice }) => {
       errors["message"] = "*Vul uw bericht in.";
     }
 
-    setForm({ errors });
+    setForm((prevForm) => ({
+      ...prevForm,
+      errors: errors,
+    }));
     return formIsValid;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (validateForm()) {
       setFormLoading(true);
-      fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          Accept: "application/json, text/plain, */*",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(form),
-      })
-        .then(
-          setFormLoading(false),
-          setFormSuccess(true),
+
+      try {
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            Accept: "application/json, text/plain, */*",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(form),
+        });
+
+        if (response.ok) {
+          setFormLoading(false);
+          setFormSuccess(true);
           setForm({
             name: "",
             email: "",
             message: "",
-            errors: {},
-          })
-        )
-        .catch((err) => console.log(err));
+            errors: {
+              name: "",
+              email: "",
+              message: "",
+            },
+          });
+        } else {
+          console.log("Failed to submit the form.");
+        }
+      } catch (err) {
+        console.error("Error submitting the form:", err);
+        setFormLoading(false);
+      }
     }
   };
 

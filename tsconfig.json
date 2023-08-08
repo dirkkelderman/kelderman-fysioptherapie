@@ -21,9 +21,11 @@
   },
   "include": [
     "next-env.d.ts",
+    ".slicemachine/prismicio.d.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "slices/ContactForm/index.jsx", "pages/[uid].jsx", "pages/index.jsx"  ],
+    "**/*.tsx",
+    "**/*.jsx"
+, "slices/ContactForm/index.tsx", "pages/[uid].jsx", "pages/index.jsx"  ],
   "exclude": [
     "node_modules"
   ]

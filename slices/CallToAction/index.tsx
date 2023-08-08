@@ -4,6 +4,11 @@ import { PrismicNextImage } from "@prismicio/next";
 import { Bounded } from "../../components/Bounded";
 import { Heading } from "../../components/Heading";
 
+import type { Content } from "@prismicio/client";
+import type { SliceComponentProps } from "@prismicio/react";
+
+export type CallToActionProps = SliceComponentProps<Content.CallToActionSlice>;
+
 /** @type {import("@prismicio/react").PrismicRichTextProps['components']} */
 const components = {
   heading1: ({ children }) => (
@@ -13,7 +18,7 @@ const components = {
   ),
 };
 
-const CallToAction = ({ slice }) => {
+const CallToAction = ({ slice }: CallToActionProps) => {
   const backgroundImage = slice.primary.image;
 
   return (

@@ -3,6 +3,11 @@ import { PrismicRichText } from "@prismicio/react";
 import { Bounded } from "../../components/Bounded";
 import { Heading } from "../../components/Heading";
 
+import type { Content } from "@prismicio/client";
+import type { SliceComponentProps } from "@prismicio/react";
+
+export type AccordionProps = SliceComponentProps<Content.AccordionSlice>;
+
 /**
  * @typedef {import("@prismicio/client").Content.AccordionSlice} AccordionSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<AccordionSlice>} AccordionProps
@@ -22,7 +27,7 @@ const AccordionItem = ({ itemHeader, itemContent, index }) => {
   const [selected, setSelected] = useState(null);
 
   return (
-    <div className="w-full md:w-2/3 py-3">
+    <div className="w-full py-3 md:w-2/3">
       <button
         className="flex w-full items-center justify-between rounded border-[1px] border-slate-400 p-2"
         onClick={() => setSelected(!selected)}
@@ -45,7 +50,7 @@ const AccordionItem = ({ itemHeader, itemContent, index }) => {
   );
 };
 
-const Accordion = ({ slice }) => (
+const Accordion = ({ slice }: AccordionProps) => (
   <Bounded as="section" yPadding="sm">
     <PrismicRichText field={slice.primary.heading} />
 
