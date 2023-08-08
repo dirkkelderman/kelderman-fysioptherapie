@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { PrismicLink, PrismicProvider } from "@prismicio/react";
 import { PrismicPreview } from "@prismicio/next";
+import { Analytics } from "@vercel/analytics/react";
 
 import { repositoryName, linkResolver } from "../prismicio";
 import { Heading } from "../components/Heading";
@@ -83,6 +84,7 @@ export default function App({ Component, pageProps }) {
       richTextComponents={richTextComponents}
     >
       <PrismicPreview repositoryName={repositoryName}>
+        <Analytics />
         <Component {...pageProps} />
       </PrismicPreview>
     </PrismicProvider>
