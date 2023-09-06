@@ -4,7 +4,10 @@ import { NextApiRequest, NextApiResponse } from "next";
 const NODE_EMAIL = process.env.NODEMAILER_EMAIL;
 const NODE_PASSWORD = process.env.NODEMAILER_PASSWORD;
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   const { name, email, message } = req.body;
 
   const transporter = nodemailer.createTransport({

@@ -24,7 +24,7 @@ const Hero = ({ slice }) => {
           field={backgroundImage}
           alt=""
           layout="fill"
-          className="pointer-events-none select-none object-cover opacity-40 object-[-125px] lg:object-center"
+          className="pointer-events-none select-none object-cover object-top opacity-40"
         />
       )}
       <Bounded yPadding="lg" className="relative">

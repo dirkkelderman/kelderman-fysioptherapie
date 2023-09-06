@@ -16,8 +16,8 @@ const components = {
 export const Footer = ({ footer }) => {
   return (
     <Bounded as="footer" yPadding="sm" className="bg-[#183540] text-white">
-      <div className="grid grid-cols-2 gap-x-6 gap-y-3 text-center leading-none md:grid-cols-4 ">
-        <div className="flex h-full flex-col justify-between items-center">
+      <div className="grid grid-cols-1 gap-x-6 gap-y-3 text-center leading-none md:grid-cols-4 ">
+        <div className="flex h-full flex-col items-center justify-between">
           <PrismicRichText field={footer.data?.sitemapHeading} />
           <ul className=" list-none">
             {footer.data?.sitemap.map((item, index) => (
@@ -29,13 +29,13 @@ export const Footer = ({ footer }) => {
             ))}
           </ul>
         </div>
-        <div className="flex h-full flex-col justify-between items-center">
+        <div className="flex h-full flex-col items-center justify-between">
           <PrismicRichText field={footer.data?.locationsHeading} />
           <ul className=" list-none">
             {footer.data?.locations.map((item, index) => (
-              <li key={index} className=" tracking-tight text-white pb-2">
-                <PrismicRichText field={item.city} components={components}/>
-                <PrismicRichText field={item.address} components={components}/>
+              <li key={index} className=" pb-2 tracking-tight text-white">
+                <PrismicRichText field={item.city} components={components} />
+                <PrismicRichText field={item.address} components={components} />
               </li>
             ))}
           </ul>
@@ -44,9 +44,12 @@ export const Footer = ({ footer }) => {
           <PrismicRichText field={footer.data?.contactHeading} />
           <ul className=" list-none">
             {footer.data?.contact.map((item, index) => (
-              <li key={index} className="tracking-tight text-white pb-2">
-                <PrismicRichText field={item.email} components={components}/>
-                <PrismicRichText field={item.telephone} components={components}/>
+              <li key={index} className="pb-2 tracking-tight text-white">
+                <PrismicRichText field={item.email} components={components} />
+                <PrismicRichText
+                  field={item.telephone}
+                  components={components}
+                />
               </li>
             ))}
           </ul>
