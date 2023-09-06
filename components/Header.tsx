@@ -5,7 +5,7 @@ import { Bounded } from "./Bounded";
 import Image from "next/image";
 import { useState } from "react";
 
-export const Header = ({ navigation, settings, isOpen }) => {
+export const Header = ({ navigation, settings }) => {
   const image = settings.data.logo;
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
