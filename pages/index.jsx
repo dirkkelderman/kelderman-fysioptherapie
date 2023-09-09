@@ -27,7 +27,7 @@ const Index = ({ page, navigation, settings, footer }) => {
           description: prismicH.asText(socialCardDescription),
           images: [
             {
-              url: socialCardImage.url,
+              url: "../public/logokeldermanfysio.png",
               width: 800,
               height: 600,
               alt: socialCardImage.alt,

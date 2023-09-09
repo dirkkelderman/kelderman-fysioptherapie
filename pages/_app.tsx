@@ -96,7 +96,7 @@ export default function App({ Component, pageProps }) {
             title: "Kelderman Fysiotherapie",
             images: [
               {
-                url: "/logokeldermanfysio.png",
+                url: "../public/logokeldermanfysio.png",
                 width: 150,
                 height: 150,
                 alt: "Kelderman Fysiotherapie",

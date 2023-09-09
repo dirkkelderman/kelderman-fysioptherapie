@@ -27,6 +27,7 @@ export const Header = ({ navigation, settings }) => {
                 height="30"
                 layout="fixed"
                 objectFit="contain"
+                priority
               />
             </div>
             <div className="">
