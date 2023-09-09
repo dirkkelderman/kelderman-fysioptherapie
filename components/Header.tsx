@@ -35,7 +35,7 @@ export const Header = ({ navigation, settings }) => {
           </div>
         </PrismicLink>
         <nav>
-          <ul className="hidden flex-wrap gap-6 md:flex  md:gap-10">
+          <ul className="hidden flex-wrap gap-6 sm:flex  md:gap-10">
             {navigation.data?.links.map((item) => (
               <li
                 key={prismicH.asText(item.label)}
@@ -49,7 +49,7 @@ export const Header = ({ navigation, settings }) => {
           </ul>
 
           <button
-            className="rounded-md border border-slate-800 px-4 py-2 font-semibold tracking-tight text-slate-800 md:hidden"
+            className="rounded-md border border-slate-800 px-4 py-2 font-semibold tracking-tight text-slate-800 sm:hidden"
             onClick={toggleMenu}
           >
             MENU

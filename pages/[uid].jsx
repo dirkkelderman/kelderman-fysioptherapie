@@ -5,34 +5,37 @@ import * as prismicH from "@prismicio/helpers";
 import { createClient } from "../prismicio";
 import { components } from "../slices";
 import { Layout } from "../components/Layout";
+import { NextSeo } from "next-seo";
 
 const Page = ({ page, navigation, settings, footer }) => {
+  const {
+    metaTitle,
+    metaDescription,
+    socialCardTitle,
+    socialCardDescription,
+    socialCardImage,
+  } = page.data;
+
   return (
     <Layout navigation={navigation} settings={settings} footer={footer}>
-      <Head>
-        <title>
-          {prismicH.asText(page.data.title)} |{" "}
-          {prismicH.asText(settings.data.siteTitle)}
-        </title>
-        <meta name="description" content={page.data.metaDescription} />
-
-        <meta
-          property="og:title"
-          content={
-            prismicH.asText(page.data.socialCardTitle) |
-            prismicH.asText(settings.data.siteTitle)
-          }
-        />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={page.data?.url} />
-        <meta property="og:image" content={page.data?.socialCardImage?.url} />
-        <meta
-          property="og:description"
-          content={prismicH.asText(page.data?.socialCardDescription)}
-        />
-        <meta property="og:site_name" content="Kelderman Fysiotherapie" />
-        <meta property="fb:admins" content="Facebook numeric ID" />
-      </Head>
+      <NextSeo
+        title={metaTitle}
+        description={metaDescription}
+        canonical={`https://www.kelderman-fysiotherapie.nl${page.url}`}
+        openGraph={{
+          title: socialCardTitle,
+          description: socialCardDescription,
+          images: [
+            {
+              url: socialCardImage.url,
+              width: 800,
+              height: 600,
+              alt: socialCardImage.alt,
+              type: "image/jpeg",
+            },
+          ],
+        }}
+      />
       <SliceZone slices={page.data.slices} components={components} />
     </Layout>
   );
