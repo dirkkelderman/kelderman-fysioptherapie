@@ -24,7 +24,7 @@ const Index = ({ page, navigation, settings, footer }) => {
       <NextSeo
         title={metaTitle}
         description={metaDescription}
-        canonical="https://www.kelderman-fysiotherapie.nl/"
+        canonical="https://www.keldermanfysiotherapie.nl/"
         openGraph={{
           title: socialCardTitle,
           description: socialCardDescription,

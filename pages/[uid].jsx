@@ -21,7 +21,7 @@ const Page = ({ page, navigation, settings, footer }) => {
       <NextSeo
         title={metaTitle}
         description={metaDescription}
-        canonical={`https://www.kelderman-fysiotherapie.nl${page.url}`}
+        canonical={`https://www.keldermanfysiotherapie.nl${page.url}`}
         openGraph={{
           title: socialCardTitle,
           description: socialCardDescription,
