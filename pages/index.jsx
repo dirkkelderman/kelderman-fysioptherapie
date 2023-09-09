@@ -18,16 +18,13 @@ const Index = ({ page, navigation, settings, footer }) => {
 
   return (
     <Layout navigation={navigation} settings={settings} footer={footer}>
-      <Head>
-        <title>{prismicH.asText(page.data.title)}</title>
-      </Head>
       <NextSeo
         title={metaTitle}
         description={metaDescription}
         canonical="https://www.keldermanfysiotherapie.nl/"
         openGraph={{
-          title: socialCardTitle,
-          description: socialCardDescription,
+          title: prismicH.asText(socialCardTitle),
+          description: prismicH.asText(socialCardDescription),
           images: [
             {
               url: socialCardImage.url,

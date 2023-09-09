@@ -23,8 +23,8 @@ const Page = ({ page, navigation, settings, footer }) => {
         description={metaDescription}
         canonical={`https://www.keldermanfysiotherapie.nl${page.url}`}
         openGraph={{
-          title: socialCardTitle,
-          description: socialCardDescription,
+          title: prismicH.asText(socialCardTitle),
+          description: prismicH.asText(socialCardDescription),
           images: [
             {
               url: socialCardImage.url,
