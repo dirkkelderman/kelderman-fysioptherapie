@@ -27,7 +27,7 @@ const Index = ({ page, navigation, settings, footer }) => {
           description: prismicH.asText(socialCardDescription),
           images: [
             {
-              url: "../public/logokeldermanfysio.png",
+              url: "https://images.prismic.io/kelderman-fysiotherapie/dd404877-d58e-4264-8c1f-22f961cf710b_logo_groot_alleen_K.png?auto=compress,format",
               width: 800,
               height: 600,
               alt: socialCardImage.alt,
