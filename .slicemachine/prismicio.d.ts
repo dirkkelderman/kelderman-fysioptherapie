@@ -367,7 +367,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = HeroSlice | QuoteSlice | TextSlice | ImageSlice | ImageCardsSlice | TextWithImageSlice | ServicesSlice | LocationCardsSlice | TestimonialsSlice | PartnershipsSlice | CallToActionSlice | ReviewCardsSlice | ContactFormSlice | AccordionSlice;
+type PageDocumentDataSlicesSlice = HeroSlice | QuoteSlice | TextSlice | ImageSlice | ImageCardsSlice | TextWithImageSlice | ServicesSlice | LocationCardsSlice | TestimonialsSlice | PartnershipsSlice | CallToActionSlice | ReviewCardsSlice | ContactFormSlice | AccordionSlice | ProductShowcaseSlice;
 /**
  * Slice for *Page → Slice Zone*
  *
@@ -1001,6 +1001,165 @@ type PartnershipsSliceVariation = PartnershipsSliceDefault;
  */
 export type PartnershipsSlice = prismicT.SharedSlice<"partnerships", PartnershipsSliceVariation>;
 /**
+ * Primary content in ProductShowcase → Primary
+ *
+ */
+interface ProductShowcaseSliceDefaultPrimary {
+    /**
+     * Title field in *ProductShowcase → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: product_showcase.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Description field in *ProductShowcase → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: product_showcase.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * Image 1 field in *ProductShowcase → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: product_showcase.primary.image_1
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image_1: prismicT.ImageField<never>;
+    /**
+     * Heading 1 field in *ProductShowcase → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: product_showcase.primary.heading_1
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    heading_1: prismicT.TitleField;
+    /**
+     * Subtext 1 field in *ProductShowcase → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: product_showcase.primary.subtext_1
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    subtext_1: prismicT.RichTextField;
+    /**
+     * Image 2 field in *ProductShowcase → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: product_showcase.primary.image_2
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image_2: prismicT.ImageField<never>;
+    /**
+     * Heading 2 field in *ProductShowcase → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: product_showcase.primary.heading_2
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    heading_2: prismicT.TitleField;
+    /**
+     * Subtext 2 field in *ProductShowcase → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: product_showcase.primary.subtext_2
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    subtext_2: prismicT.RichTextField;
+    /**
+     * Image 3 field in *ProductShowcase → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: product_showcase.primary.image_3
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image_3: prismicT.ImageField<never>;
+    /**
+     * Heading 3 field in *ProductShowcase → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: product_showcase.primary.heading_3
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    heading_3: prismicT.TitleField;
+    /**
+     * Subtext 3 field in *ProductShowcase → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: product_showcase.primary.subtext_3
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    subtext_3: prismicT.RichTextField;
+    /**
+     * CTA Link field in *ProductShowcase → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: product_showcase.primary.cta_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    cta_link: prismicT.LinkField;
+    /**
+     * CTA Text field in *ProductShowcase → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: product_showcase.primary.cta_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    cta_text: prismicT.RichTextField;
+}
+/**
+ * Default variation for ProductShowcase Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `ProductShowcase`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ProductShowcaseSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<ProductShowcaseSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *ProductShowcase*
+ *
+ */
+type ProductShowcaseSliceVariation = ProductShowcaseSliceDefault;
+/**
+ * ProductShowcase Shared Slice
+ *
+ * - **API ID**: `product_showcase`
+ * - **Description**: `ProductShowcase`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ProductShowcaseSlice = prismicT.SharedSlice<"product_showcase", ProductShowcaseSliceVariation>;
+/**
  * Primary content in Quote → Primary
  *
  */
@@ -1561,6 +1720,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FooterDocumentData, FooterDocumentDataSitemapItem, FooterDocumentDataLocationsItem, FooterDocumentDataContactItem, FooterDocumentDataSocialsItem, FooterDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocumentDataSlices1Slice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, AccordionSliceDefaultPrimary, AccordionSliceDefaultItem, AccordionSliceDefault, AccordionSliceVariation, AccordionSlice, CallToActionSliceDefaultPrimary, CallToActionSliceDefault, CallToActionSliceVariation, CallToActionSlice, ContactFormSliceDefaultPrimary, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceBannerPrimary, ImageSliceBanner, ImageSliceVariation, ImageSlice, ImageCardsSliceDefaultPrimary, ImageCardsSliceDefaultItem, ImageCardsSliceDefault, ImageCardsSliceVariation, ImageCardsSlice, LocationCardsSliceDefaultPrimary, LocationCardsSliceDefaultItem, LocationCardsSliceDefault, LocationCardsSliceVariation, LocationCardsSlice, PartnershipsSliceDefaultPrimary, PartnershipsSliceDefaultItem, PartnershipsSliceDefault, PartnershipsSliceVariation, PartnershipsSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, ReviewCardsSliceDefaultPrimary, ReviewCardsSliceDefaultItem, ReviewCardsSliceDefault, ReviewCardsSliceVariation, ReviewCardsSlice, ServicesSliceDefaultPrimary, ServicesSliceDefaultItem, ServicesSliceDefault, ServicesSliceVariation, ServicesSlice, SocialCardsSliceDefaultPrimary, SocialCardsSliceDefault, SocialCardsSliceVariation, SocialCardsSlice, TestimonialsSliceDefaultPrimary, TestimonialsSliceDefaultItem, TestimonialsSliceDefault, TestimonialsSliceVariation, TestimonialsSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceTwoColumnsPrimary, TextSliceTwoColumns, TextSliceVariation, TextSlice, TextWithImageSliceDefaultPrimary, TextWithImageSliceDefault, TextWithImageSliceWithButtonPrimary, TextWithImageSliceWithButton, TextWithImageSliceTextRightPrimary, TextWithImageSliceTextRight, TextWithImageSliceVariation, TextWithImageSlice };
+        export type { FooterDocumentData, FooterDocumentDataSitemapItem, FooterDocumentDataLocationsItem, FooterDocumentDataContactItem, FooterDocumentDataSocialsItem, FooterDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocumentDataSlices1Slice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, AccordionSliceDefaultPrimary, AccordionSliceDefaultItem, AccordionSliceDefault, AccordionSliceVariation, AccordionSlice, CallToActionSliceDefaultPrimary, CallToActionSliceDefault, CallToActionSliceVariation, CallToActionSlice, ContactFormSliceDefaultPrimary, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceBannerPrimary, ImageSliceBanner, ImageSliceVariation, ImageSlice, ImageCardsSliceDefaultPrimary, ImageCardsSliceDefaultItem, ImageCardsSliceDefault, ImageCardsSliceVariation, ImageCardsSlice, LocationCardsSliceDefaultPrimary, LocationCardsSliceDefaultItem, LocationCardsSliceDefault, LocationCardsSliceVariation, LocationCardsSlice, PartnershipsSliceDefaultPrimary, PartnershipsSliceDefaultItem, PartnershipsSliceDefault, PartnershipsSliceVariation, PartnershipsSlice, ProductShowcaseSliceDefaultPrimary, ProductShowcaseSliceDefault, ProductShowcaseSliceVariation, ProductShowcaseSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, ReviewCardsSliceDefaultPrimary, ReviewCardsSliceDefaultItem, ReviewCardsSliceDefault, ReviewCardsSliceVariation, ReviewCardsSlice, ServicesSliceDefaultPrimary, ServicesSliceDefaultItem, ServicesSliceDefault, ServicesSliceVariation, ServicesSlice, SocialCardsSliceDefaultPrimary, SocialCardsSliceDefault, SocialCardsSliceVariation, SocialCardsSlice, TestimonialsSliceDefaultPrimary, TestimonialsSliceDefaultItem, TestimonialsSliceDefault, TestimonialsSliceVariation, TestimonialsSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceTwoColumnsPrimary, TextSliceTwoColumns, TextSliceVariation, TextSlice, TextWithImageSliceDefaultPrimary, TextWithImageSliceDefault, TextWithImageSliceWithButtonPrimary, TextWithImageSliceWithButton, TextWithImageSliceTextRightPrimary, TextWithImageSliceTextRight, TextWithImageSliceVariation, TextWithImageSlice };
     }
 }

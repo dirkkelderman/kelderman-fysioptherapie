@@ -8,6 +8,7 @@ import Image from './Image';
 import ImageCards from './ImageCards';
 import LocationCards from './LocationCards';
 import Partnerships from './Partnerships';
+import ProductShowcase from './ProductShowcase';
 import Quote from './Quote';
 import ReviewCards from './ReviewCards';
 import ServicesCards from './ServicesCards';
@@ -25,6 +26,7 @@ export {
 	ImageCards,
 	LocationCards,
 	Partnerships,
+	ProductShowcase,
 	Quote,
 	ReviewCards,
 	ServicesCards,
@@ -43,6 +45,7 @@ export const components = {
 	image_cards: ImageCards,
 	location_cards: LocationCards,
 	partnerships: Partnerships,
+	product_showcase: ProductShowcase,
 	quote: Quote,
 	review_cards: ReviewCards,
 	services: ServicesCards,

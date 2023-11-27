@@ -14,7 +14,7 @@
     "title": [
       {
         "type": "heading1",
-        "text": "Until",
+        "text": "Today",
         "spans": []
       }
     ],
@@ -32,14 +32,14 @@
     "socialCardTitle": [
       {
         "type": "paragraph",
-        "text": "Excepteur fugiat id in veniam occaecat reprehenderit do ea.",
+        "text": "Eu commodo qui esse. Eiusmod esse esse voluptate culpa duis amet mollit in. Incididunt eiusmod id quis voluptate est culpa anim culpa veniam dolor.",
         "spans": []
       }
     ],
     "socialCardDescription": [
       {
         "type": "paragraph",
-        "text": "Dolor enim est dolore.",
+        "text": "Occaecat cillum mollit dolor eu do reprehenderit fugiat mollit. Occaecat esse cillum excepteur proident id. Adipisicing commodo id est veniam do deserunt in aliquip esse dolor magna duis voluptate elit do.",
         "spans": []
       }
     ],
@@ -50,10 +50,10 @@
       },
       "alt": null,
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a"
+      "url": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
     },
     "slices1": [],
-    "metaTitle": "start",
-    "metaDescription": "ever"
+    "metaTitle": "lesson",
+    "metaDescription": "journey"
   }
 }

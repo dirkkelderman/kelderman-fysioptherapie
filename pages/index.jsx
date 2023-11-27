@@ -31,7 +31,7 @@ const Index = ({ page, navigation, settings, footer }) => {
               width: 800,
               height: 600,
               alt: socialCardImage.alt,
-              type: "image/jpeg",
+              type: "image/png",
             },
           ],
         }}

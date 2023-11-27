@@ -108,7 +108,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/dirk/Development/Projects/kelderman-fysiotherapie/.slicemachine/assets/slices/Accordion/default/preview.png",
+            "path": "/Users/dirkkelderman/Development/Projects/kelderman-fysioptherapie/.slicemachine/assets/slices/Accordion/default/preview.png",
             "width": 800,
             "height": 306
           }
@@ -234,7 +234,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/dirk/Development/Projects/kelderman-fysiotherapie/.slicemachine/assets/slices/CallToAction/default/preview.png",
+            "path": "/Users/dirkkelderman/Development/Projects/kelderman-fysioptherapie/.slicemachine/assets/slices/CallToAction/default/preview.png",
             "width": 800,
             "height": 456
           }
@@ -310,7 +310,7 @@
         },
         "meta": {
           "fileName": "index",
-          "extension": "jsx"
+          "extension": "tsx"
         },
         "screenshotPaths": {}
       },
@@ -412,7 +412,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/dirk/Development/Projects/kelderman-fysiotherapie/.slicemachine/assets/slices/Hero/default/preview.png",
+            "path": "/Users/dirkkelderman/Development/Projects/kelderman-fysioptherapie/.slicemachine/assets/slices/Hero/default/preview.png",
             "width": 800,
             "height": 694
           }
@@ -514,12 +514,12 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/dirk/Development/Projects/kelderman-fysiotherapie/.slicemachine/assets/slices/Image/default/preview.png",
+            "path": "/Users/dirkkelderman/Development/Projects/kelderman-fysioptherapie/.slicemachine/assets/slices/Image/default/preview.png",
             "width": 800,
             "height": 530
           },
           "banner": {
-            "path": "/Users/dirk/Development/Projects/kelderman-fysiotherapie/.slicemachine/assets/slices/Image/banner/preview.png",
+            "path": "/Users/dirkkelderman/Development/Projects/kelderman-fysioptherapie/.slicemachine/assets/slices/Image/banner/preview.png",
             "width": 800,
             "height": 363
           }
@@ -710,7 +710,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/dirk/Development/Projects/kelderman-fysiotherapie/.slicemachine/assets/slices/ImageCards/default/preview.png",
+            "path": "/Users/dirkkelderman/Development/Projects/kelderman-fysioptherapie/.slicemachine/assets/slices/ImageCards/default/preview.png",
             "width": 800,
             "height": 1167
           }
@@ -839,7 +839,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/dirk/Development/Projects/kelderman-fysiotherapie/.slicemachine/assets/slices/LocationCards/default/preview.png",
+            "path": "/Users/dirkkelderman/Development/Projects/kelderman-fysioptherapie/.slicemachine/assets/slices/LocationCards/default/preview.png",
             "width": 800,
             "height": 927
           }
@@ -938,11 +938,259 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/dirk/Development/Projects/kelderman-fysiotherapie/.slicemachine/assets/slices/Partnerships/default/preview.png",
+            "path": "/Users/dirkkelderman/Development/Projects/kelderman-fysioptherapie/.slicemachine/assets/slices/Partnerships/default/preview.png",
             "width": 800,
             "height": 636
           }
         }
+      },
+      "product_showcase": {
+        "library": "slices",
+        "id": "product_showcase",
+        "name": "ProductShowcase",
+        "description": "ProductShowcase",
+        "model": {
+          "id": "product_showcase",
+          "type": "SharedSlice",
+          "name": "ProductShowcase",
+          "description": "ProductShowcase",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "ProductShowcase",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "heading2"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                },
+                "image_1": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Image 1",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "heading_1": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Heading 1",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading3"
+                  }
+                },
+                "subtext_1": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Subtext 1",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,preformatted,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "image_2": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Image 2",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "heading_2": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Heading 2",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading3"
+                  }
+                },
+                "subtext_2": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Subtext 2",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "image_3": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Image 3",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "heading_3": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Heading 3",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading3"
+                  }
+                },
+                "subtext_3": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Subtext 3",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "cta_link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "CTA Link",
+                    "placeholder": "",
+                    "select": null
+                  }
+                },
+                "cta_text": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "CTA Text",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading2",
+                  "text": "Herself",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Occaecat deserunt ad veniam et ad voluptate est magna culpa duis qui consectetur voluptate ullamco. Excepteur laborum voluptate et eiusmod magna incididunt aute reprehenderit elit in fugiat tempor consectetur veniam culpa.",
+                  "spans": []
+                }
+              ],
+              "image_1": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a"
+              },
+              "heading_1": [
+                {
+                  "type": "heading3",
+                  "text": "Drink",
+                  "spans": []
+                }
+              ],
+              "subtext_1": [
+                {
+                  "type": "paragraph",
+                  "text": "Excepteur deserunt cupidatat sunt et nostrud.",
+                  "spans": []
+                }
+              ],
+              "image_2": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43"
+              },
+              "heading_2": [
+                {
+                  "type": "heading3",
+                  "text": "Everybody",
+                  "spans": []
+                }
+              ],
+              "subtext_2": [
+                {
+                  "type": "paragraph",
+                  "text": "Nulla ea tempor in proident ipsum esse enim do reprehenderit nulla dolore.",
+                  "spans": []
+                }
+              ],
+              "image_3": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+              },
+              "heading_3": [
+                {
+                  "type": "heading3",
+                  "text": "Little",
+                  "spans": []
+                }
+              ],
+              "subtext_3": [
+                {
+                  "type": "paragraph",
+                  "text": "Incididunt commodo nulla mollit anim eiusmod laboris irure aliquip ex consectetur enim. Eiusmod eiusmod velit est cupidatat ex ipsum excepteur anim fugiat excepteur magna. Ipsum cupidatat mollit tempor eu excepteur Lorem fugiat nulla ullamco adipisicing laboris proident.",
+                  "spans": []
+                }
+              ],
+              "cta_link": {
+                "link_type": "Web",
+                "url": "https://prismic.io"
+              },
+              "cta_text": [
+                {
+                  "type": "paragraph",
+                  "text": "Id fugiat ullamco mollit irure duis Lorem amet labore qui qui.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "product_showcase"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
       },
       "quote": {
         "library": "slices",
@@ -1008,7 +1256,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/dirk/Development/Projects/kelderman-fysiotherapie/.slicemachine/assets/slices/Quote/default/preview.png",
+            "path": "/Users/dirkkelderman/Development/Projects/kelderman-fysioptherapie/.slicemachine/assets/slices/Quote/default/preview.png",
             "width": 800,
             "height": 392
           }
@@ -1122,7 +1370,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/dirk/Development/Projects/kelderman-fysiotherapie/.slicemachine/assets/slices/ReviewCards/default/preview.png",
+            "path": "/Users/dirkkelderman/Development/Projects/kelderman-fysioptherapie/.slicemachine/assets/slices/ReviewCards/default/preview.png",
             "width": 800,
             "height": 1002
           }
@@ -1257,7 +1505,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/dirk/Development/Projects/kelderman-fysiotherapie/.slicemachine/assets/slices/ServicesCards/default/preview.png",
+            "path": "/Users/dirkkelderman/Development/Projects/kelderman-fysioptherapie/.slicemachine/assets/slices/ServicesCards/default/preview.png",
             "width": 800,
             "height": 1034
           }
@@ -1548,12 +1796,12 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/dirk/Development/Projects/kelderman-fysiotherapie/.slicemachine/assets/slices/Text/default/preview.png",
+            "path": "/Users/dirkkelderman/Development/Projects/kelderman-fysioptherapie/.slicemachine/assets/slices/Text/default/preview.png",
             "width": 800,
             "height": 516
           },
           "twoColumns": {
-            "path": "/Users/dirk/Development/Projects/kelderman-fysiotherapie/.slicemachine/assets/slices/Text/twoColumns/preview.png",
+            "path": "/Users/dirkkelderman/Development/Projects/kelderman-fysioptherapie/.slicemachine/assets/slices/Text/twoColumns/preview.png",
             "width": 800,
             "height": 276
           }
@@ -1773,12 +2021,12 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/dirk/Development/Projects/kelderman-fysiotherapie/.slicemachine/assets/slices/TextWithImage/default/preview.png",
+            "path": "/Users/dirkkelderman/Development/Projects/kelderman-fysioptherapie/.slicemachine/assets/slices/TextWithImage/default/preview.png",
             "width": 800,
             "height": 656
           },
           "withButton": {
-            "path": "/Users/dirk/Development/Projects/kelderman-fysiotherapie/.slicemachine/assets/slices/TextWithImage/withButton/preview.png",
+            "path": "/Users/dirkkelderman/Development/Projects/kelderman-fysioptherapie/.slicemachine/assets/slices/TextWithImage/withButton/preview.png",
             "width": 800,
             "height": 424
           }
