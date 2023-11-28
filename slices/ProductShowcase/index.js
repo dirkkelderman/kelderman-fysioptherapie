@@ -2,6 +2,7 @@ import React from "react";
 import { PrismicLink, PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 import * as prismicH from "@prismicio/helpers";
+import { Bounded } from "../../components/Bounded";
 
 /**
  * @typedef {import("@prismicio/client").Content.ProductShowcaseSlice} ProductShowcaseSlice
@@ -10,7 +11,7 @@ import * as prismicH from "@prismicio/helpers";
  */
 const ProductShowcase = ({ slice }) => {
   return (
-    <section className="w-full  py-12 md:py-24 lg:py-32">
+    <Bounded as="section" className="bg-white">
       <div className=" grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
         <div className="space-y-3">
           <PrismicRichText
@@ -61,7 +62,7 @@ const ProductShowcase = ({ slice }) => {
           )}
         </div>
       </div>
-    </section>
+    </Bounded>
   );
 };
 
