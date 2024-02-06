@@ -19,7 +19,7 @@ const ProductShowcase = ({ slice }) => {
             field={slice.primary.title}
           />
           <PrismicRichText
-            lassName="md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed mx-auto max-w-[700px]"
+            className="md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed mx-auto max-w-[700px]"
             field={slice.primary.description}
           />
         </div>

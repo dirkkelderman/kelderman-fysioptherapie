@@ -1,0 +1,72 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "heading": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading1",
+            "content": {
+              "text": "Length"
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "image",
+            {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8",
+                "width": 3456,
+                "height": 3456
+              },
+              "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8",
+              "width": 3456,
+              "height": 3456,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {}
+            }
+          ],
+          [
+            "text",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Velit sint reprehenderit nostrud officia eu Lorem nisi eiusmod exercitation. Voluptate Lorem cupidatat ex esse culpa qui laborum Lorem est amet aliqua laborum ad consequat magna. Ipsum ea eu aliquip in enim cillum esse occaecat commodo nulla ipsum."
+                  }
+                }
+              ]
+            }
+          ],
+          [
+            "source",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "physical",
+              "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

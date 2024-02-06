@@ -3,6 +3,7 @@
   "label": "Page",
   "repeatable": true,
   "status": true,
+  "format": "custom",
   "json": {
     "Main": {
       "uid": {
@@ -26,9 +27,7 @@
         "config": {
           "label": "Parent",
           "select": "document",
-          "customtypes": [
-            "page"
-          ]
+          "customtypes": ["page"]
         }
       },
       "slices": {
@@ -36,6 +35,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "trainin": {
+              "type": "SharedSlice"
+            },
             "hero": {
               "type": "SharedSlice"
             },

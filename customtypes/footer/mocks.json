@@ -1,0 +1,192 @@
+[
+  {
+    "sitemapHeading": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "paragraph",
+          "content": {
+            "text": "Ipsum laboris cupidatat incididunt duis sunt excepteur ad et est amet. Culpa cupidatat magna proident consectetur eiusmod laborum sunt irure qui ut. Pariatur enim commodo non dolor aute cillum ipsum."
+          }
+        }
+      ]
+    },
+    "sitemap": {
+      "__TYPE__": "GroupContentType",
+      "value": [
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            [
+              "link",
+              {
+                "__TYPE__": "LinkContent",
+                "value": {
+                  "__TYPE__": "ExternalLink",
+                  "url": "http://google.com"
+                }
+              }
+            ],
+            [
+              "label",
+              {
+                "__TYPE__": "StructuredTextContent",
+                "value": [
+                  {
+                    "type": "paragraph",
+                    "content": {
+                      "text": "Aliqua commodo id veniam minim enim laboris incididunt consectetur tempor cupidatat reprehenderit. Nulla veniam non sunt mollit laborum mollit sint sit elit occaecat voluptate. Do occaecat labore cillum proident reprehenderit esse sunt."
+                    }
+                  }
+                ]
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "locationsHeading": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "paragraph",
+          "content": {
+            "text": "Irure mollit dolor irure cupidatat sint adipisicing eu pariatur."
+          }
+        }
+      ]
+    },
+    "locations": {
+      "__TYPE__": "GroupContentType",
+      "value": [
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            [
+              "city",
+              {
+                "__TYPE__": "StructuredTextContent",
+                "value": [
+                  {
+                    "type": "paragraph",
+                    "content": {
+                      "text": "In minim quis exercitation fugiat sint nisi non ipsum voluptate ut."
+                    }
+                  }
+                ]
+              }
+            ],
+            [
+              "address",
+              {
+                "__TYPE__": "StructuredTextContent",
+                "value": [
+                  {
+                    "type": "paragraph",
+                    "content": {
+                      "text": "Aliqua voluptate sunt enim et qui dolore adipisicing commodo aliquip aute eu sunt enim. Excepteur do voluptate veniam quis ut amet aute."
+                    }
+                  }
+                ]
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "contactHeading": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "paragraph",
+          "content": {
+            "text": "Incididunt proident sunt ipsum voluptate do ex minim."
+          }
+        }
+      ]
+    },
+    "contact": {
+      "__TYPE__": "GroupContentType",
+      "value": [
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            [
+              "email",
+              {
+                "__TYPE__": "StructuredTextContent",
+                "value": [
+                  {
+                    "type": "paragraph",
+                    "content": {
+                      "text": "Occaecat commodo non quis reprehenderit esse nisi et."
+                    }
+                  }
+                ]
+              }
+            ],
+            [
+              "telephone",
+              {
+                "__TYPE__": "StructuredTextContent",
+                "value": [
+                  {
+                    "type": "paragraph",
+                    "content": {
+                      "text": "Aliquip laborum ipsum dolor esse. Lorem nulla mollit irure veniam."
+                    }
+                  }
+                ]
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "socialsHeading": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "paragraph",
+          "content": {
+            "text": "Deserunt minim quis dolor consectetur commodo minim amet consectetur duis. Reprehenderit est amet tempor eiusmod officia pariatur ea labore laborum nisi consequat nulla amet occaecat. Laborum magna nisi reprehenderit ut Lorem cupidatat laborum laborum sint do aliquip laborum dolor ea aliqua."
+          }
+        }
+      ]
+    },
+    "socials": {
+      "__TYPE__": "GroupContentType",
+      "value": [
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            [
+              "link",
+              {
+                "__TYPE__": "LinkContent",
+                "value": {
+                  "__TYPE__": "ExternalLink",
+                  "url": "http://google.com"
+                }
+              }
+            ],
+            [
+              "label",
+              {
+                "__TYPE__": "StructuredTextContent",
+                "value": [
+                  {
+                    "type": "paragraph",
+                    "content": {
+                      "text": "Exercitation eiusmod anim laborum amet eu amet elit qui consectetur voluptate cupidatat cupidatat eu aliquip ea. Consequat laborum quis elit tempor qui magna officia irure velit ipsum nostrud sint aliquip commodo."
+                    }
+                  }
+                ]
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  }
+]

@@ -3,7 +3,7 @@ import { SliceZone } from "@prismicio/react";
 import * as prismicH from "@prismicio/helpers";
 
 import { createClient } from "../prismicio";
-import { components } from "../slices";
+import { components } from "../slices/index";
 import { Layout } from "../components/Layout";
 import { NextSeo } from "next-seo";
 
