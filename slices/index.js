@@ -17,6 +17,7 @@ import Testimonials from "./Testimonials";
 import Text from "./Text";
 import TextWithImage from "./TextWithImage";
 import Trainin from "./Trainin";
+import TraininShop from "./TraininShop";
 
 export {
   Accordion,
@@ -36,6 +37,7 @@ export {
   Text,
   TextWithImage,
   Trainin,
+  TraininShop,
 };
 
 export const components = {
@@ -56,4 +58,5 @@ export const components = {
   text: Text,
   text_with_image: TextWithImage,
   trainin: Trainin,
+  trainin_shop: TraininShop,
 };

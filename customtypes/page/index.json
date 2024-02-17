@@ -35,6 +35,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "trainin_shop": {
+              "type": "SharedSlice"
+            },
             "trainin": {
               "type": "SharedSlice"
             },

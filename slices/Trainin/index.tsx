@@ -17,7 +17,7 @@ const Trainin = ({ slice }: TraininProps): JSX.Element => {
       <PrismicRichText field={slice.primary.description} />
       <iframe
         src="https://work-out-mom.trainin.app/widget/schedule?listing=public&location=NZQDK"
-        style={{ width: "100%", height: "650px", border: "none" }}
+        style={{ width: "100%", height: "450px", border: "none" }}
       ></iframe>
     </Bounded>
   );

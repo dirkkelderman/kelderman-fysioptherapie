@@ -20,4 +20,5 @@ export const components = {
   text: dynamic(() => import("./Text")),
   text_with_image: dynamic(() => import("./TextWithImage")),
   trainin: dynamic(() => import("./Trainin")),
+  trainin_shop: dynamic(() => import("./TraininShop")),
 };

@@ -272,6 +272,7 @@ export type NavigationDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | TraininShopSlice
   | TraininSlice
   | HeroSlice
   | QuoteSlice
@@ -801,9 +802,40 @@ export type ImageSliceBanner = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *Image → Primary*
+ */
+export interface ImageSliceRegularImagePrimary {
+  /**
+   * Image field in *Image → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * RegularImage variation for Image Slice
+ *
+ * - **API ID**: `regularImage`
+ * - **Description**: Image
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ImageSliceRegularImage = prismic.SharedSliceVariation<
+  "regularImage",
+  Simplify<ImageSliceRegularImagePrimary>,
+  never
+>;
+
+/**
  * Slice variation for *Image*
  */
-type ImageSliceVariation = ImageSliceDefault | ImageSliceBanner;
+type ImageSliceVariation =
+  | ImageSliceDefault
+  | ImageSliceBanner
+  | ImageSliceRegularImage;
 
 /**
  * Image Shared Slice
@@ -1895,6 +1927,51 @@ export type TraininSlice = prismic.SharedSlice<
   TraininSliceVariation
 >;
 
+/**
+ * Primary content in *TraininShop → Primary*
+ */
+export interface TraininShopSliceDefaultPrimary {
+  /**
+   * Text field in *TraininShop → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: trainin_shop.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+}
+
+/**
+ * Default variation for TraininShop Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TraininShopSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TraininShopSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *TraininShop*
+ */
+type TraininShopSliceVariation = TraininShopSliceDefault;
+
+/**
+ * TraininShop Shared Slice
+ *
+ * - **API ID**: `trainin_shop`
+ * - **Description**: TraininShop
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TraininShopSlice = prismic.SharedSlice<
+  "trainin_shop",
+  TraininShopSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -1941,9 +2018,11 @@ declare module "@prismicio/client" {
       ImageSlice,
       ImageSliceDefaultPrimary,
       ImageSliceBannerPrimary,
+      ImageSliceRegularImagePrimary,
       ImageSliceVariation,
       ImageSliceDefault,
       ImageSliceBanner,
+      ImageSliceRegularImage,
       ImageCardsSlice,
       ImageCardsSliceDefaultPrimary,
       ImageCardsSliceDefaultItem,
@@ -2004,6 +2083,10 @@ declare module "@prismicio/client" {
       TraininSliceDefaultPrimary,
       TraininSliceVariation,
       TraininSliceDefault,
+      TraininShopSlice,
+      TraininShopSliceDefaultPrimary,
+      TraininShopSliceVariation,
+      TraininShopSliceDefault,
     };
   }
 }
