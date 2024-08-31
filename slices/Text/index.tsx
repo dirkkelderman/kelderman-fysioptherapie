@@ -1,9 +1,12 @@
-import { PrismicRichText } from "@prismicio/react";
+import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import clsx from "clsx";
+import { Content } from "@prismicio/client";
 
 import { Bounded } from "../../components/Bounded";
 
-const Text = ({ slice }) => {
+export type TextProps = SliceComponentProps<Content.TextSlice>;
+
+const Text = ({ slice }: TextProps): JSX.Element => {
   return (
     <Bounded as="section" yPadding="sm" className="bg-white leading-relaxed">
       <div

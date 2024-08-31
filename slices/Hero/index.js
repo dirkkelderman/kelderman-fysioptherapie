@@ -1,4 +1,4 @@
-import * as prismicH from "@prismicio/helpers";
+import * as prismic from "@prismicio/client";
 import { PrismicLink, PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 
@@ -19,7 +19,7 @@ const Hero = ({ slice }) => {
 
   return (
     <section className="relative bg-slate-900 text-white">
-      {prismicH.isFilled.image(backgroundImage) && (
+      {prismic.isFilled.image(backgroundImage) && (
         <PrismicNextImage
           field={backgroundImage}
           alt=""
@@ -35,7 +35,7 @@ const Hero = ({ slice }) => {
               components={components}
             />
           </div>
-          {prismicH.isFilled.link(slice.primary.buttonLink) && (
+          {prismic.isFilled.link(slice.primary.buttonLink) && (
             <PrismicLink
               field={slice.primary.buttonLink}
               className="rounded bg-[#9BCD9B] px-5 py-3 font-medium text-slate-800"

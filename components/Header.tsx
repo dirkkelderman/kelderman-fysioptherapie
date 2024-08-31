@@ -1,5 +1,5 @@
 import { PrismicLink, PrismicText } from "@prismicio/react";
-import * as prismicH from "@prismicio/helpers";
+import * as prismic from "@prismicio/client";
 
 import { Bounded } from "./Bounded";
 import Image from "next/image";
@@ -39,7 +39,7 @@ export const Header = ({ navigation, settings }) => {
           <ul className="hidden flex-wrap gap-6 sm:flex  md:gap-10">
             {navigation.data?.links.map((item) => (
               <li
-                key={prismicH.asText(item.label)}
+                key={prismic.asText(item.label)}
                 className="font-semibold tracking-tight text-slate-800"
               >
                 <PrismicLink field={item.link}>
@@ -65,7 +65,7 @@ export const Header = ({ navigation, settings }) => {
               <ul className="flex flex-col gap-4 text-center">
                 {navigation.data?.links.map((item) => (
                   <li
-                    key={prismicH.asText(item.label)}
+                    key={prismic.asText(item.label)}
                     className="font-semibold tracking-tight text-slate-800"
                   >
                     <PrismicLink field={item.link}>

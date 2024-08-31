@@ -1,5 +1,4 @@
 import * as prismic from "@prismicio/client";
-// import * as prismicH from "@prismicio/helpers";
 import * as prismicNext from "@prismicio/next";
 import sm from "./slicemachine.config.json";
 
@@ -9,7 +8,7 @@ export const repositoryName = prismic.getRepositoryName(sm.apiEndpoint);
  * The project's Prismic Link Resolver. This function determines the URL for a
  * given Prismic document.
  *
- * @type {prismicH.LinkResolverFunction}
+ * @type {prismic.LinkResolverFunction}
  */
 export const linkResolver = (doc) => {
   if (doc.url === "/home") {

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { SliceZone } from "@prismicio/react";
-import * as prismicH from "@prismicio/helpers";
+import * as prismic from "@prismicio/client";
 
 import { createClient } from "../prismicio";
 import { components } from "../slices/index";
@@ -23,8 +23,8 @@ const Index = ({ page, navigation, settings, footer }) => {
         description={metaDescription}
         canonical="https://www.keldermanfysiotherapie.nl/"
         openGraph={{
-          title: prismicH.asText(socialCardTitle),
-          description: prismicH.asText(socialCardDescription),
+          title: prismic.asText(socialCardTitle),
+          description: prismic.asText(socialCardDescription),
           images: [
             {
               url: "https://images.prismic.io/kelderman-fysiotherapie/dd404877-d58e-4264-8c1f-22f961cf710b_logo_groot_alleen_K.png?auto=compress,format",
