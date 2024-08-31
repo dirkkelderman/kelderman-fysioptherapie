@@ -1,4 +1,4 @@
-import * as prismicH from "@prismicio/helpers";
+import * as prismic from "@prismicio/client";
 import { PrismicLink, PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 import { Bounded } from "../../components/Bounded";
@@ -23,7 +23,7 @@ const CallToAction = ({ slice }: CallToActionProps) => {
 
   return (
     <section className="relative bg-slate-900 text-white">
-      {prismicH.isFilled.image(backgroundImage) && (
+      {prismic.isFilled.image(backgroundImage) && (
         <PrismicNextImage
           field={backgroundImage}
           alt=""
@@ -45,7 +45,7 @@ const CallToAction = ({ slice }: CallToActionProps) => {
               components={components}
             />
           </div>
-          {prismicH.isFilled.link(slice.primary.ctaLink) && (
+          {prismic.isFilled.link(slice.primary.ctaLink) && (
             <PrismicLink
               field={slice.primary.ctaLink}
               className="rounded bg-[#9BCD9B] px-5 py-3 font-medium text-slate-800"

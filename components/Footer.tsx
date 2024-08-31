@@ -1,5 +1,5 @@
 import { PrismicLink, PrismicRichText, PrismicText } from "@prismicio/react";
-import * as prismicH from "@prismicio/helpers";
+import * as prismic from "@prismicio/client";
 
 import { Bounded } from "./Bounded";
 import { Heading } from "./Heading";

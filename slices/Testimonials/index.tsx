@@ -1,22 +1,31 @@
-import * as prismicH from "@prismicio/helpers";
-import { PrismicLink, PrismicRichText, PrismicText } from "@prismicio/react";
+import * as prismic from "@prismicio/client";
+import {
+  PrismicLink,
+  PrismicRichText,
+  PrismicText,
+  SliceComponentProps,
+} from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
+import { Content } from "@prismicio/client";
 
 import { Bounded } from "../../components/Bounded";
 import { Heading } from "../../components/Heading";
 import { ConditionalWrap } from "../../components/ConditionalWrap";
 
-const TestimonialCard = ({ item }) => {
+export type TestimonialsSliceType =
+  SliceComponentProps<Content.TestimonialsSlice>;
+
+const TestimonialCard = ({ item }): JSX.Element => {
   const image = item.image;
 
   return (
     <li className="grid gap-8">
-      {prismicH.isFilled.image(image) && (
+      {prismic.isFilled.image(image) && (
         <div className="w-40">
           <ConditionalWrap
-            condition={prismicH.isFilled.link(item.buttonLink)}
+            condition={prismic.isFilled.link(item.buttonLink)}
             wrap={({ children }) => (
-              <PrismicLink field={item.buttonLink} tabIndex="-1">
+              <PrismicLink field={item.buttonLink} tabIndex={-1}>
                 {children}
               </PrismicLink>
             )}
@@ -33,11 +42,11 @@ const TestimonialCard = ({ item }) => {
         <PrismicRichText field={item.text} />
       </div>
       <div>
-        {prismicH.isFilled.keyText(item.source) && (
+        {prismic.isFilled.keyText(item.source) && (
           <figcaption className="text-right">&mdash; {item.source}</figcaption>
         )}
       </div>
-      {prismicH.isFilled.link(item.buttonLink) && (
+      {prismic.isFilled.link(item.buttonLink) && (
         <div>
           <PrismicLink field={item.buttonLink} className="font-semibold">
             {item.buttonText || "More Info"}
@@ -48,12 +57,12 @@ const TestimonialCard = ({ item }) => {
   );
 };
 
-const Testimonials = ({ slice }) => {
+const Testimonials = ({ slice }: TestimonialsSliceType): JSX.Element => {
   return (
     <Bounded as="section" className="bg-white">
       <div className="grid gap-12">
-        {prismicH.isFilled.richText(slice.primary.heading) && (
-          <Heading className="text-center">
+        {prismic.isFilled.richText(slice.primary.heading) && (
+          <Heading as={"h6"} className="text-center">
             <PrismicText field={slice.primary.heading} />
           </Heading>
         )}

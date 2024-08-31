@@ -1,10 +1,20 @@
-import * as prismicH from "@prismicio/helpers";
-import { PrismicLink, PrismicRichText, PrismicText } from "@prismicio/react";
+import * as prismic from "@prismicio/client";
+import {
+  PrismicLink,
+  PrismicRichText,
+  PrismicText,
+  SliceComponentProps,
+} from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 
 import { Bounded } from "../../components/Bounded";
 import { Heading } from "../../components/Heading";
 import { ConditionalWrap } from "../../components/ConditionalWrap";
+
+import { Content } from "@prismicio/client";
+
+export type LocationCardsSliceType =
+  SliceComponentProps<Content.LocationCardsSlice>;
 
 const LocationCard = ({ item }) => {
   const image = item.image;
@@ -12,12 +22,12 @@ const LocationCard = ({ item }) => {
   return (
     <li className="flex w-full justify-center">
       <div className="w-full p-10">
-        {prismicH.isFilled.image(image) && (
+        {prismic.isFilled.image(image) && (
           <div className="bg-gray-100">
             <ConditionalWrap
-              condition={prismicH.isFilled.link(item.buttonLink)}
+              condition={prismic.isFilled.link(item.buttonLink)}
               wrap={({ children }) => (
-                <PrismicLink field={item.buttonLink} tabIndex="-1">
+                <PrismicLink field={item.buttonLink} tabIndex={-1}>
                   {children}
                 </PrismicLink>
               )}
@@ -29,7 +39,7 @@ const LocationCard = ({ item }) => {
         <div className="pt-10 leading-relaxed">
           <PrismicRichText field={item.text} />
         </div>
-        {prismicH.isFilled.link(item.buttonLink) && (
+        {prismic.isFilled.link(item.buttonLink) && (
           <div>
             <PrismicLink field={item.buttonLink} className="font-semibold">
               {item.buttonText || "More Info"}
@@ -39,10 +49,10 @@ const LocationCard = ({ item }) => {
       </div>
     </li>
     // <li className="grid max-w-sm gap-8 bg-red-100">
-    // {prismicH.isFilled.image(image) && (
+    // {prismic.isFilled.image(image) && (
     //   <div className="bg-gray-100">
     //     <ConditionalWrap
-    //       condition={prismicH.isFilled.link(item.buttonLink)}
+    //       condition={prismic.isFilled.link(item.buttonLink)}
     //       wrap={({ children }) => (
     //         <PrismicLink field={item.buttonLink} tabIndex="-1">
     //           {children}
@@ -56,7 +66,7 @@ const LocationCard = ({ item }) => {
     // <div className="leading-relaxed">
     //   <PrismicRichText field={item.text} />
     // </div>
-    // {prismicH.isFilled.link(item.buttonLink) && (
+    // {prismic.isFilled.link(item.buttonLink) && (
     //   <div>
     //     <PrismicLink field={item.buttonLink} className="font-semibold">
     //       {item.buttonText || "More Info"}
@@ -67,12 +77,12 @@ const LocationCard = ({ item }) => {
   );
 };
 
-const LocationCards = ({ slice }) => {
+const LocationCards = ({ slice }: LocationCardsSliceType): JSX.Element => {
   return (
     <Bounded as="section" className="bg-white">
       <div className="grid gap-12">
-        {prismicH.isFilled.richText(slice.primary.heading) && (
-          <Heading className="text-center">
+        {prismic.isFilled.richText(slice.primary.heading) && (
+          <Heading as={"h3"} className="text-center">
             <PrismicText field={slice.primary.heading} />
           </Heading>
         )}
