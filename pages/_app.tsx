@@ -13,8 +13,8 @@ import { DefaultSeo } from "next-seo";
 
 const NextLinkShim = ({ href, children, locale, ...props }) => {
   return (
-    <Link href={href} locale={locale}>
-      <a {...props}>{children}</a>
+    <Link href={href} locale={locale} {...props}>
+      {children}
     </Link>
   );
 };

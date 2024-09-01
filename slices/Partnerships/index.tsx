@@ -32,11 +32,7 @@ const PartnershipCard = ({ item }) => {
               </PrismicLink>
             )}
           >
-            <PrismicNextImage
-              field={image}
-              layout="responsive"
-              className="rounded-full"
-            />
+            <PrismicNextImage field={image} className="rounded-full" />
           </ConditionalWrap>
         </div>
       )}
