@@ -31,7 +31,7 @@ const ReviewCard = ({ item }) => {
               </PrismicLink>
             )}
           >
-            <PrismicNextImage field={image} layout="responsive" className="" />
+            <PrismicNextImage field={image} className="" />
           </ConditionalWrap>
         </div>
       )}

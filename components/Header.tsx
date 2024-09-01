@@ -4,6 +4,7 @@ import * as prismic from "@prismicio/client";
 import { Bounded } from "./Bounded";
 import Image from "next/image";
 import { useState } from "react";
+import { PrismicNextImage } from "@prismicio/next";
 
 export const Header = ({ navigation, settings }) => {
   const image = settings.data.logo;
@@ -20,13 +21,14 @@ export const Header = ({ navigation, settings }) => {
         <PrismicLink href="/" className=" text-xl font-semibold tracking-tight">
           <div className="flex items-center">
             <div className="flex items-center px-3">
-              <Image
-                src={image.url}
-                alt={image.alt}
+              <PrismicNextImage
+                field={image}
+                // src={image.url}
+                // alt={image.alt}
                 width="30"
                 height="30"
-                layout="fixed"
-                objectFit="contain"
+                // layout="fixed"
+                // objectFit="contain"
                 priority
               />
             </div>

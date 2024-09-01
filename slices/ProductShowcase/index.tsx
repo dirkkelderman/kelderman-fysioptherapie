@@ -23,14 +23,10 @@ const ProductShowcase = ({ slice }: ProductShowcaseProps): JSX.Element => {
     <Bounded as="section" className="bg-white">
       <div className=" grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
         <div className="space-y-3">
-          <PrismicRichText
-            // className="md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed mx-auto max-w-[700px]"
-            field={slice.primary.title}
-          />
-          <PrismicRichText
-            // className="md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed mx-auto max-w-[700px]"
-            field={slice.primary.description}
-          />
+          <div className="md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed mx-auto max-w-[700px]">
+            <PrismicRichText field={slice.primary.title} />
+            <PrismicRichText field={slice.primary.description} />
+          </div>
         </div>
         <div className="grid w-full grid-cols-1 items-center justify-center gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-12">
           <div className="mx-auto flex flex-col items-center justify-center space-y-4">

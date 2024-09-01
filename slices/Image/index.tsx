@@ -24,7 +24,7 @@ const Image = ({ slice, index }: ImageProps): JSX.Element => {
             slice.variation === "regularImage" && "mx-auto w-2/3 md:w-5/12 "
           )}
         >
-          <PrismicNextImage field={image} layout="responsive" />
+          <PrismicNextImage field={image} />
         </div>
       )}
     </Bounded>

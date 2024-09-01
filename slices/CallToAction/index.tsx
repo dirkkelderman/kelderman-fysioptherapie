@@ -27,7 +27,6 @@ const CallToAction = ({ slice }: CallToActionProps) => {
         <PrismicNextImage
           field={backgroundImage}
           alt=""
-          layout="fill"
           className="pointer-events-none select-none object-cover opacity-40"
         />
       )}

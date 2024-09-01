@@ -1,9 +1,17 @@
 import * as prismic from "@prismicio/client";
-import { PrismicLink, PrismicRichText } from "@prismicio/react";
+import {
+  PrismicLink,
+  PrismicRichText,
+  SliceComponentProps,
+} from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 
 import { Bounded } from "../../components/Bounded";
 import { Heading } from "../../components/Heading";
+
+import { Content } from "@prismicio/client";
+
+export type HeroSliceType = SliceComponentProps<Content.HeroSlice>;
 
 /** @type {import("@prismicio/react").PrismicRichTextProps['components']} */
 const components = {
@@ -14,7 +22,7 @@ const components = {
   ),
 };
 
-const Hero = ({ slice }) => {
+const Hero = ({ slice }: HeroSliceType): JSX.Element => {
   const backgroundImage = slice.primary.backgroundImage;
 
   return (
@@ -23,7 +31,6 @@ const Hero = ({ slice }) => {
         <PrismicNextImage
           field={backgroundImage}
           alt=""
-          layout="fill"
           className="pointer-events-none select-none object-cover object-top opacity-40"
         />
       )}

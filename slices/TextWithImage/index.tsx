@@ -24,7 +24,7 @@ const TextWithImage = ({ slice }: TextWithImageProps): JSX.Element => {
           <div>
             {prismic.isFilled.image(image) && (
               <div className="bg-gray-100">
-                <PrismicNextImage field={image} layout="responsive" />
+                <PrismicNextImage field={image} />
               </div>
             )}
           </div>
@@ -40,7 +40,7 @@ const TextWithImage = ({ slice }: TextWithImageProps): JSX.Element => {
           <div>
             {prismic.isFilled.image(image) && (
               <div className="bg-gray-100">
-                <PrismicNextImage field={image} layout="responsive" />
+                <PrismicNextImage field={image} />
               </div>
             )}
           </div>
