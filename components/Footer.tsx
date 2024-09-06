@@ -3,6 +3,14 @@ import * as prismic from "@prismicio/client";
 import { Bounded } from "./Bounded";
 import { Heading } from "./Heading";
 
+// Simple skeleton loader component for text
+const SkeletonLoader = ({ height }) => (
+  <div
+    className={`animate-pulse bg-gray-300`}
+    style={{ height: height || "20px" }}
+  ></div>
+);
+
 const components = {
   heading3: ({ children }) => (
     <Heading as="h3" size="sm" className="min-h-[40px]">
@@ -18,70 +26,107 @@ export const Footer = ({ footer }) => {
       <div className="grid grid-cols-1 gap-x-6 gap-y-3 text-center leading-none md:grid-cols-4">
         {/* Sitemap */}
         <div className="flex h-full min-h-[200px] flex-col items-center justify-between">
-          <PrismicRichText
-            field={footer.data?.sitemapHeading}
-            fallback={<h3>Loading...</h3>}
-          />
+          {footer.data?.sitemapHeading ? (
+            <PrismicRichText field={footer.data.sitemapHeading} />
+          ) : (
+            <SkeletonLoader height="40px" /> // Skeleton loader for heading
+          )}
           <ul className="min-h-[150px] list-none">
-            {footer.data?.sitemap.map((item, index) => (
-              <li key={index} className="tracking-tight text-white">
-                <PrismicLink field={item.link}>
-                  <PrismicText field={item.label} />
-                </PrismicLink>
-              </li>
-            ))}
+            {footer.data?.sitemap ? (
+              footer.data.sitemap.map((item, index) => (
+                <li key={index} className="tracking-tight text-white">
+                  <PrismicLink field={item.link}>
+                    <PrismicText field={item.label} />
+                  </PrismicLink>
+                </li>
+              ))
+            ) : (
+              <>
+                <SkeletonLoader height="20px" />
+                <SkeletonLoader height="20px" />
+                <SkeletonLoader height="20px" />
+              </>
+            )}
           </ul>
         </div>
 
         {/* Locations */}
         <div className="flex h-full min-h-[200px] flex-col items-center justify-between">
-          <PrismicRichText
-            field={footer.data?.locationsHeading}
-            fallback={<h3>Loading...</h3>}
-          />
+          {footer.data?.locationsHeading ? (
+            <PrismicRichText field={footer.data.locationsHeading} />
+          ) : (
+            <SkeletonLoader height="40px" /> // Skeleton loader for heading
+          )}
           <ul className="min-h-[150px] list-none">
-            {footer.data?.locations.map((item, index) => (
-              <li key={index} className="pb-2 tracking-tight text-white">
-                <PrismicRichText field={item.city} components={components} />
-                <PrismicRichText field={item.address} components={components} />
-              </li>
-            ))}
+            {footer.data?.locations ? (
+              footer.data.locations.map((item, index) => (
+                <li key={index} className="pb-2 tracking-tight text-white">
+                  <PrismicRichText field={item.city} components={components} />
+                  <PrismicRichText
+                    field={item.address}
+                    components={components}
+                  />
+                </li>
+              ))
+            ) : (
+              <>
+                <SkeletonLoader height="20px" />
+                <SkeletonLoader height="20px" />
+              </>
+            )}
           </ul>
         </div>
 
         {/* Contact */}
         <div className="flex h-full min-h-[200px] flex-col justify-between">
-          <PrismicRichText
-            field={footer.data?.contactHeading}
-            fallback={<h3>Loading...</h3>}
-          />
+          {footer.data?.contactHeading ? (
+            <PrismicRichText field={footer.data.contactHeading} />
+          ) : (
+            <SkeletonLoader height="40px" /> // Skeleton loader for heading
+          )}
           <ul className="min-h-[150px] list-none">
-            {footer.data?.contact.map((item, index) => (
-              <li key={index} className="pb-2 tracking-tight text-white">
-                <PrismicRichText field={item.email} components={components} />
-                <PrismicRichText
-                  field={item.telephone}
-                  components={components}
-                />
-              </li>
-            ))}
+            {footer.data?.contact ? (
+              footer.data.contact.map((item, index) => (
+                <li key={index} className="pb-2 tracking-tight text-white">
+                  <PrismicRichText field={item.email} components={components} />
+                  <PrismicRichText
+                    field={item.telephone}
+                    components={components}
+                  />
+                </li>
+              ))
+            ) : (
+              <>
+                <SkeletonLoader height="20px" />
+                <SkeletonLoader height="20px" />
+              </>
+            )}
           </ul>
         </div>
 
         {/* Socials */}
         <div className="flex h-full min-h-[200px] flex-col justify-between">
-          <PrismicRichText
-            field={footer.data?.socialsHeading}
-            fallback={<h3>Loading...</h3>}
-          />
+          {footer.data?.socialsHeading ? (
+            <PrismicRichText field={footer.data.socialsHeading} />
+          ) : (
+            <SkeletonLoader height="40px" /> // Skeleton loader for heading
+          )}
           <ul className="min-h-[150px] list-none">
-            {footer.data?.socials.map((item, index) => (
-              <li key={index} className="tracking-tight text-white">
-                <PrismicLink field={item.link}>
-                  <PrismicText field={item.label} />
-                </PrismicLink>
-              </li>
-            ))}
+            {footer.data?.socials ? (
+              footer.data.socials.map((item, index) => (
+                <li key={index} className="tracking-tight text-white">
+                  <PrismicLink field={item.link}>
+                    <PrismicText field={item.label} />
+                  </PrismicLink>
+                </li>
+              ))
+            ) : (
+              <>
+                <SkeletonLoader height="20px" />
+                <SkeletonLoader height="20px" />
+                <SkeletonLoader height="20px" />
+              </>
+            )}
           </ul>
         </div>
       </div>
