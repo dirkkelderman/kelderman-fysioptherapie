@@ -32,16 +32,18 @@ const ServiceCard = ({ item }) => {
             >
               <PrismicNextImage
                 field={image}
-                className="h-48 w-full object-cover" // Fix the image height and ensure it covers the area
+                className="h-48 w-full object-cover"
+                width={800} // Use actual dimensions or aspect ratio
+                height={600}
               />
             </ConditionalWrap>
           </div>
         )}
-        <div className="flex-grow leading-relaxed">
+        <div className="min-h-[100px] flex-grow leading-relaxed">
           <PrismicRichText field={item.text} />
         </div>
         {prismic.isFilled.link(item.buttonLink) && (
-          <div className="mb-2">
+          <div className="mb-2 min-h-[50px]">
             <PrismicLink
               field={item.buttonLink}
               className="rounded border-2 border-[#183540] px-5 py-2 font-semibold text-[#183540] hover:bg-[#183540] hover:text-white"

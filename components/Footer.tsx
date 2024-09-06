@@ -17,7 +17,7 @@ export const Footer = ({ footer }) => {
   return (
     <Bounded as="footer" yPadding="sm" className="bg-[#183540] text-white">
       <div className="grid grid-cols-1 gap-x-6 gap-y-3 text-center leading-none md:grid-cols-4 ">
-        <div className="flex h-full flex-col items-center justify-between">
+        <div className="flex h-full min-h-[100px] flex-col items-center justify-between">
           <PrismicRichText field={footer.data?.sitemapHeading} />
           <ul className=" list-none">
             {footer.data?.sitemap.map((item, index) => (
