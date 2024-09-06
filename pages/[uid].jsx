@@ -66,8 +66,11 @@ export async function getStaticPaths() {
 
   const pages = await client.getAllByType("page", { lang: "*" });
 
+  // Filter out page with slug /blog
+  const filteredPages = pages.filter((page) => page.uid !== "blog");
+
   return {
-    paths: pages.map((page) => {
+    paths: filteredPages.map((page) => {
       return {
         params: { uid: page.uid },
         locale: page.lang,
