@@ -60,13 +60,25 @@ const PartnershipCard = ({ item }) => {
 const Partnerships = ({ slice }: PartnershipsSliceType): JSX.Element => {
   return (
     <Bounded as="section" className="bg-white">
-      <div className="grid gap-12">
+      <div className="grid grid-cols-1 gap-12 ">
         {prismic.isFilled.richText(slice.primary.heading) && (
-          <Heading as={"h2"} className="text-center">
+          <Heading as="h2" className="text-center">
             <PrismicText field={slice.primary.heading} />
           </Heading>
         )}
-        <Carousel cols={4} rows={1} gap={8} loop autoplay>
+        <Carousel
+          cols={4} // Default columns for large screens
+          rows={1}
+          gap={8}
+          loop
+          autoplay
+          responsiveLayout={[
+            { breakpoint: 1024, cols: 3 }, // For medium screens, show 3 columns
+            { breakpoint: 768, cols: 2 }, // For tablets, show 2 columns
+            { breakpoint: 480, cols: 1 }, // For mobile, show 1 column
+          ]}
+          mobileBreakpoint={480} // Mobile breakpoint for further customization
+        >
           {slice.items.map((item, index) => (
             <Carousel.Item key={index}>
               <PartnershipCard item={item} />
