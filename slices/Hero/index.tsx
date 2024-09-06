@@ -10,6 +10,7 @@ import { Bounded } from "../../components/Bounded";
 import { Heading } from "../../components/Heading";
 
 import { Content } from "@prismicio/client";
+import Image from "next/image";
 
 export type HeroSliceType = SliceComponentProps<Content.HeroSlice>;
 
@@ -25,15 +26,27 @@ const components = {
 const Hero = ({ slice }: HeroSliceType): JSX.Element => {
   const backgroundImage = slice.primary.backgroundImage;
 
+  const buttonLink = prismic.isFilled.link(slice.primary.buttonLink) ? (
+    <PrismicLink
+      field={slice.primary.buttonLink}
+      className="rounded bg-[#9BCD9B] px-5 py-3 font-medium text-slate-800"
+    >
+      {slice.primary.buttonText || "Learn More"}
+    </PrismicLink>
+  ) : null;
+
   return (
     <section className="relative bg-slate-900 text-white">
       {/* Background image overlay */}
       {prismic.isFilled.image(backgroundImage) && (
-        <div
-          className="absolute inset-0 bg-cover bg-top opacity-40"
-          style={{
-            backgroundImage: `url(${backgroundImage.url})`,
-          }}
+        <Image
+          src={backgroundImage.url}
+          alt={backgroundImage.alt || "Background"}
+          layout="fill"
+          objectFit="cover"
+          objectPosition="top"
+          className="z-0 opacity-40" // Overlay effect
+          priority // Load it as a priority image for faster LCP
         />
       )}
 
@@ -46,14 +59,7 @@ const Hero = ({ slice }: HeroSliceType): JSX.Element => {
               components={components}
             />
           </div>
-          {prismic.isFilled.link(slice.primary.buttonLink) && (
-            <PrismicLink
-              field={slice.primary.buttonLink}
-              className="rounded bg-[#9BCD9B] px-5 py-3 font-medium text-slate-800"
-            >
-              {slice.primary.buttonText || "Learn More"}
-            </PrismicLink>
-          )}
+          {buttonLink}
         </div>
       </Bounded>
     </section>
