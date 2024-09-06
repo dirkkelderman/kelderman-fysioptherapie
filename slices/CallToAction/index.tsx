@@ -22,15 +22,22 @@ const CallToAction = ({ slice }: CallToActionProps) => {
   const backgroundImage = slice.primary.image;
 
   return (
-    <section className="relative bg-slate-900 text-white">
-      {prismic.isFilled.image(backgroundImage) && (
-        <PrismicNextImage
-          field={backgroundImage}
-          alt=""
-          className="pointer-events-none select-none object-cover opacity-40"
-        />
-      )}
-      <Bounded yPadding="base" className="relative">
+    <section
+      className="relative bg-slate-900 text-white"
+      style={{
+        backgroundImage: prismic.isFilled.image(backgroundImage)
+          ? `url(${backgroundImage.url})`
+          : "none",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/* Overlay to control opacity */}
+      <div className="absolute inset-0 bg-black opacity-40"></div>
+
+      {/* Bounded content on top of the background and overlay */}
+      <Bounded yPadding="base" className="relative z-10">
         <div className="grid justify-items-center gap-8">
           <div className="max-w-2xl text-center">
             <PrismicRichText

@@ -21,9 +21,9 @@ const PartnershipCard = ({ item }) => {
   const image = item.logo;
 
   return (
-    <li className="grid lg:gap-8">
+    <li className="flex h-48 w-48 flex-col items-center justify-between rounded-lg bg-white p-4 ">
       {prismic.isFilled.image(image) && (
-        <div className="">
+        <div className="mb-4 flex-shrink-0">
           <ConditionalWrap
             condition={prismic.isFilled.link(item.buttonLink)}
             wrap={({ children }) => (
@@ -32,16 +32,23 @@ const PartnershipCard = ({ item }) => {
               </PrismicLink>
             )}
           >
-            <PrismicNextImage field={image} className="rounded-full" />
+            <PrismicNextImage
+              field={image}
+              className="h-36 w-36 rounded-full object-cover"
+              alt=""
+            />
           </ConditionalWrap>
         </div>
       )}
-      <div className="text-center leading-relaxed">
+      <div className="flex-grow text-center">
         <PrismicRichText field={item.partnership} />
       </div>
       {prismic.isFilled.link(item.buttonLink) && (
-        <div>
-          <PrismicLink field={item.buttonLink} className="font-semibold">
+        <div className="mt-2">
+          <PrismicLink
+            field={item.buttonLink}
+            className="font-semibold text-blue-600 hover:underline"
+          >
             {item.buttonText || "More Info"}
           </PrismicLink>
         </div>

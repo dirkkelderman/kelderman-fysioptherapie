@@ -27,14 +27,18 @@ const Hero = ({ slice }: HeroSliceType): JSX.Element => {
 
   return (
     <section className="relative bg-slate-900 text-white">
+      {/* Background image overlay */}
       {prismic.isFilled.image(backgroundImage) && (
-        <PrismicNextImage
-          field={backgroundImage}
-          alt=""
-          className="pointer-events-none select-none object-cover object-top opacity-40"
+        <div
+          className="absolute inset-0 bg-cover bg-top opacity-40"
+          style={{
+            backgroundImage: `url(${backgroundImage.url})`,
+          }}
         />
       )}
-      <Bounded yPadding="lg" className="relative">
+
+      {/* Content of the section */}
+      <Bounded yPadding="lg" className="relative z-10">
         <div className="grid justify-items-center gap-8">
           <div className="max-w-2xl text-center">
             <PrismicRichText

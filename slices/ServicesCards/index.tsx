@@ -19,9 +19,9 @@ const ServiceCard = ({ item }) => {
 
   return (
     <PrismicLink field={item.buttonLink}>
-      <li className="grid gap-8  p-4 hover:bg-slate-100">
+      <li className="grid gap-8 p-4 hover:bg-slate-100">
         {prismic.isFilled.image(image) && (
-          <div className="bg-gray-100 ">
+          <div className="bg-gray-100">
             <ConditionalWrap
               condition={prismic.isFilled.link(item.buttonLink)}
               wrap={({ children }) => (
@@ -30,11 +30,14 @@ const ServiceCard = ({ item }) => {
                 </PrismicLink>
               )}
             >
-              <PrismicNextImage field={image} className="" />
+              <PrismicNextImage
+                field={image}
+                className="h-48 w-full object-cover" // Fix the image height and ensure it covers the area
+              />
             </ConditionalWrap>
           </div>
         )}
-        <div className="leading-relaxed">
+        <div className="flex-grow leading-relaxed">
           <PrismicRichText field={item.text} />
         </div>
         {prismic.isFilled.link(item.buttonLink) && (
@@ -62,7 +65,7 @@ const ServicesCards = ({ slice }: ServicesCardsSliceType): JSX.Element => {
           </Heading>
         )}
         <PrismicRichText field={slice.primary.description} />
-        <ul className="grid auto-cols-[minmax(3,4)] gap-4 md:grid-flow-col ">
+        <ul className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
           {slice.items.map((item, index) => (
             <ServiceCard key={index} item={item} />
           ))}

@@ -18,7 +18,7 @@ const ImageCard = ({ item }) => {
   const image = item.image;
 
   return (
-    <li className="grid gap-8">
+    <li className="flex flex-col gap-8">
       {prismic.isFilled.image(image) && (
         <div className="bg-gray-100">
           <ConditionalWrap
@@ -29,7 +29,10 @@ const ImageCard = ({ item }) => {
               </PrismicLink>
             )}
           >
-            <PrismicNextImage field={image} />
+            <PrismicNextImage
+              className=" h-72 w-full object-cover"
+              field={image}
+            />
           </ConditionalWrap>
         </div>
       )}
