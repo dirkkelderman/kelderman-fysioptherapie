@@ -17,43 +17,49 @@ export type ServicesCardsSliceType = SliceComponentProps<Content.ServicesSlice>;
 const ServiceCard = ({ item }) => {
   const image = item.image;
 
+  const linkText =
+    item.buttonText ||
+    `Lees hier meer over ${item.text?.[0]?.text || "deze dienst"}`;
+
   return (
-    <PrismicLink field={item.buttonLink}>
-      <li className="grid gap-8 p-4 hover:bg-slate-100">
-        {prismic.isFilled.image(image) && (
-          <div className="bg-gray-100">
-            <ConditionalWrap
-              condition={prismic.isFilled.link(item.buttonLink)}
-              wrap={({ children }) => (
-                <PrismicLink field={item.buttonLink} tabIndex={-1}>
-                  {children}
-                </PrismicLink>
-              )}
-            >
-              <PrismicNextImage
-                field={image}
-                className="h-48 w-full object-cover"
-                width={800} // Use actual dimensions or aspect ratio
-                height={600}
-              />
-            </ConditionalWrap>
-          </div>
-        )}
-        <div className="min-h-[100px] flex-grow leading-relaxed">
-          <PrismicRichText field={item.text} />
+    <li className="grid gap-8 p-4 hover:bg-slate-100">
+      {prismic.isFilled.image(image) && (
+        <div className="bg-gray-100">
+          <ConditionalWrap
+            condition={prismic.isFilled.link(item.buttonLink)}
+            wrap={({ children }) => (
+              <PrismicLink field={item.buttonLink} tabIndex={-1}>
+                {children}
+              </PrismicLink>
+            )}
+          >
+            <PrismicNextImage
+              field={image}
+              className="h-48 w-full object-cover"
+              width={800} // Use actual dimensions or aspect ratio
+              height={600}
+              alt={
+                item.image?.alt ||
+                `Image related to ${item.text?.[0]?.text || "this service"}`
+              } // Descriptive alt text
+            />
+          </ConditionalWrap>
         </div>
-        {prismic.isFilled.link(item.buttonLink) && (
-          <div className="mb-2 min-h-[50px]">
-            <PrismicLink
-              field={item.buttonLink}
-              className="rounded border-2 border-[#183540] px-5 py-2 font-semibold text-[#183540] hover:bg-[#183540] hover:text-white"
-            >
-              {item.buttonText || "Meer info"}
-            </PrismicLink>
-          </div>
-        )}
-      </li>
-    </PrismicLink>
+      )}
+      <div className="min-h-[50px] flex-grow leading-relaxed">
+        <PrismicRichText field={item.text} />
+      </div>
+      {prismic.isFilled.link(item.buttonLink) && (
+        <div className="mb-2 min-h-[50px]">
+          <PrismicLink
+            field={item.buttonLink}
+            className="block w-fit break-words rounded border-2 border-[#183540] px-5 py-2 text-start font-semibold leading-normal text-[#183540] hover:bg-[#183540] hover:text-white"
+          >
+            {linkText}
+          </PrismicLink>
+        </div>
+      )}
+    </li>
   );
 };
 
