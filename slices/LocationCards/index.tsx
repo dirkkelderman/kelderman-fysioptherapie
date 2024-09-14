@@ -32,7 +32,7 @@ const LocationCard = ({ item }) => {
                 </PrismicLink>
               )}
             >
-              <PrismicNextImage field={image} />
+              <PrismicNextImage field={image} fallbackAlt="" />
             </ConditionalWrap>
           </div>
         )}

@@ -14,6 +14,7 @@ export const components = {
   product_showcase: dynamic(() => import("./ProductShowcase")),
   quote: dynamic(() => import("./Quote")),
   review_cards: dynamic(() => import("./ReviewCards")),
+  richt_text: dynamic(() => import("./RichtText")),
   services: dynamic(() => import("./ServicesCards")),
   social_cards: dynamic(() => import("./SocialCards")),
   testimonials: dynamic(() => import("./Testimonials")),
