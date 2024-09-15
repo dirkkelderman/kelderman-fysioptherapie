@@ -12,8 +12,6 @@ import { Heading } from "../../components/Heading";
 import { ConditionalWrap } from "../../components/ConditionalWrap";
 import { Content } from "@prismicio/client";
 
-import Carousel from "better-react-carousel";
-
 export type PartnershipsSliceType =
   SliceComponentProps<Content.PartnershipsSlice>;
 
@@ -21,7 +19,7 @@ const PartnershipCard = ({ item }) => {
   const image = item.logo;
 
   return (
-    <li className="flex h-48 w-48 flex-col items-center justify-between rounded-lg bg-white p-4 ">
+    <li className=" ">
       {prismic.isFilled.image(image) && (
         <div className="mb-4 flex-shrink-0">
           <ConditionalWrap
@@ -34,8 +32,10 @@ const PartnershipCard = ({ item }) => {
           >
             <PrismicNextImage
               field={image}
-              className="h-36 w-36 rounded-full object-cover"
+              className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
               alt=""
+              height={48}
+              width={158}
             />
           </ConditionalWrap>
         </div>
@@ -66,25 +66,15 @@ const Partnerships = ({ slice }: PartnershipsSliceType): JSX.Element => {
             <PrismicText field={slice.primary.heading} />
           </Heading>
         )}
-        <Carousel
-          cols={4} // Default columns for large screens
-          rows={1}
-          gap={8}
-          loop
-          autoplay
-          responsiveLayout={[
-            { breakpoint: 1024, cols: 3 }, // For medium screens, show 3 columns
-            { breakpoint: 768, cols: 2 }, // For tablets, show 2 columns
-            { breakpoint: 480, cols: 1 }, // For mobile, show 1 column
-          ]}
-          mobileBreakpoint={480} // Mobile breakpoint for further customization
-        >
-          {slice.items.map((item, index) => (
-            <Carousel.Item key={index}>
-              <PartnershipCard item={item} />
-            </Carousel.Item>
-          ))}
-        </Carousel>
+        <div className="">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <ul className="mx-auto grid max-w-lg grid-cols-3 items-center gap-x-8 gap-y-12 sm:max-w-xl  sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none">
+              {slice.items.map((item, index) => (
+                <PartnershipCard item={item} key={index} />
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
     </Bounded>
   );

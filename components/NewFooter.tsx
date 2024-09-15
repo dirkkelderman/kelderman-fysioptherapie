@@ -53,14 +53,14 @@ export const NewFooter = ({ footer, settings }) => {
             <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
-                  <h3 className="text-sm font-semibold leading-6 text-white">
+                  <h3 className="min-h-[240px] text-sm font-semibold leading-6 text-white">
                     {footer.data?.sitemapHeading ? (
                       <PrismicRichText field={footer.data.sitemapHeading} />
                     ) : (
                       <SkeletonLoader height="40px" width="80%" /> // Skeleton loader for heading
                     )}
                   </h3>
-                  <ul role="list" className="mt-6 space-y-4">
+                  <ul role="list" className="mt-6 min-h-[150px] space-y-4">
                     {footer.data?.sitemap ? (
                       footer.data.sitemap.map((item, index) => (
                         <li
@@ -82,14 +82,14 @@ export const NewFooter = ({ footer, settings }) => {
                   </ul>
                 </div>
                 <div className="mt-10 md:mt-0">
-                  <h3 className="text-sm font-semibold leading-6 text-white">
+                  <h3 className="min-h-[240px] text-sm font-semibold leading-6 text-white">
                     {footer.data?.locationsHeading ? (
                       <PrismicRichText field={footer.data.locationsHeading} />
                     ) : (
                       <SkeletonLoader height="40px" width="80%" /> // Skeleton loader for heading
                     )}
                   </h3>
-                  <ul role="list" className="mt-6 space-y-4">
+                  <ul role="list" className="mt-6 min-h-[150px] space-y-4">
                     {footer.data?.locations ? (
                       footer.data.locations.map((item, index) => (
                         <li
@@ -117,14 +117,14 @@ export const NewFooter = ({ footer, settings }) => {
               </div>
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
-                  <h3 className="text-sm font-semibold leading-6 text-white">
+                  <h3 className="min-h-[240px] text-sm font-semibold leading-6 text-white">
                     {footer.data?.contactHeading ? (
                       <PrismicRichText field={footer.data.contactHeading} />
                     ) : (
                       <SkeletonLoader height="40px" width="80%" /> // Skeleton loader for heading
                     )}
                   </h3>
-                  <ul role="list" className="mt-6 space-y-4">
+                  <ul role="list" className="mt-6 min-h-[150px] space-y-4">
                     {footer.data?.contact ? (
                       footer.data.contact.map((item, index) => (
                         <li
@@ -150,14 +150,14 @@ export const NewFooter = ({ footer, settings }) => {
                   </ul>
                 </div>
                 <div className="mt-10 md:mt-0">
-                  <h3 className="text-sm font-semibold leading-6 text-white">
+                  <h3 className="min-h-[240px] text-sm font-semibold leading-6 text-white">
                     {footer.data?.socialsHeading ? (
                       <PrismicRichText field={footer.data.socialsHeading} />
                     ) : (
                       <SkeletonLoader height="40px" width="80%" /> // Skeleton loader for heading
                     )}
                   </h3>
-                  <ul role="list" className="mt-6 space-y-4">
+                  <ul role="list" className="mt-6 min-h-[150px] space-y-4">
                     {footer.data?.socials ? (
                       footer.data.socials.map((item, index) => (
                         <li
