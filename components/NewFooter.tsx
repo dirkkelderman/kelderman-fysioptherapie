@@ -2,6 +2,12 @@ import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import { Bounded } from "./Bounded";
 import { PrismicRichText, PrismicText } from "@prismicio/react";
 import { Heading } from "./Heading";
+import { Content } from "@prismicio/client";
+
+type FooterProps = {
+  footer: Content.FooterDocument;
+  settings: Content.SettingsDocument;
+};
 
 const SkeletonLoader = ({ height, width }) => (
   <div
@@ -19,7 +25,7 @@ const components = {
   paragraph: ({ children }) => <p className="mb-1">{children}</p>,
 };
 
-export const NewFooter = ({ footer, settings }) => {
+export const NewFooter = ({ footer, settings }: FooterProps) => {
   const image = settings.data.logo;
 
   //Get Current Year
@@ -36,28 +42,16 @@ export const NewFooter = ({ footer, settings }) => {
         <h2 id="footer-heading" className="sr-only">
           Footer
         </h2>
-        <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
-          <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-            <div className="">
-              <div className=" max-w-fit rounded-full bg-white p-2">
-                <PrismicNextImage
-                  field={image}
-                  width="30"
-                  height="30"
-                  priority
-                  className="h-7 "
-                />
-              </div>
-            </div>
-
+        <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 text-center sm:pt-24 lg:px-8 lg:pt-32">
+          <div className="xl:grid xl:grid-cols-2 xl:gap-8">
             <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
-                  <h3 className="min-h-[240px] text-sm font-semibold leading-6 text-white">
+                  <h3 className="min-h-[30px] text-sm font-semibold leading-6 text-white">
                     {footer.data?.sitemapHeading ? (
                       <PrismicRichText field={footer.data.sitemapHeading} />
                     ) : (
-                      <SkeletonLoader height="40px" width="80%" /> // Skeleton loader for heading
+                      <SkeletonLoader height="30px" width="80%" /> // Skeleton loader for heading
                     )}
                   </h3>
                   <ul role="list" className="mt-6 min-h-[150px] space-y-4">
@@ -82,11 +76,11 @@ export const NewFooter = ({ footer, settings }) => {
                   </ul>
                 </div>
                 <div className="mt-10 md:mt-0">
-                  <h3 className="min-h-[240px] text-sm font-semibold leading-6 text-white">
+                  <h3 className=" min-h-[30px] text-sm font-semibold leading-6 text-white">
                     {footer.data?.locationsHeading ? (
                       <PrismicRichText field={footer.data.locationsHeading} />
                     ) : (
-                      <SkeletonLoader height="40px" width="80%" /> // Skeleton loader for heading
+                      <SkeletonLoader height="30px" width="80%" /> // Skeleton loader for heading
                     )}
                   </h3>
                   <ul role="list" className="mt-6 min-h-[150px] space-y-4">
@@ -117,11 +111,11 @@ export const NewFooter = ({ footer, settings }) => {
               </div>
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
-                  <h3 className="min-h-[240px] text-sm font-semibold leading-6 text-white">
+                  <h3 className=" min-h-[30px] text-sm font-semibold leading-6 text-white">
                     {footer.data?.contactHeading ? (
                       <PrismicRichText field={footer.data.contactHeading} />
                     ) : (
-                      <SkeletonLoader height="40px" width="80%" /> // Skeleton loader for heading
+                      <SkeletonLoader height="30px" width="80%" /> // Skeleton loader for heading
                     )}
                   </h3>
                   <ul role="list" className="mt-6 min-h-[150px] space-y-4">
@@ -150,11 +144,11 @@ export const NewFooter = ({ footer, settings }) => {
                   </ul>
                 </div>
                 <div className="mt-10 md:mt-0">
-                  <h3 className="min-h-[240px] text-sm font-semibold leading-6 text-white">
+                  <h3 className="min-h-[30px] text-sm font-semibold leading-6 text-white">
                     {footer.data?.socialsHeading ? (
                       <PrismicRichText field={footer.data.socialsHeading} />
                     ) : (
-                      <SkeletonLoader height="40px" width="80%" /> // Skeleton loader for heading
+                      <SkeletonLoader height="30px" width="80%" /> // Skeleton loader for heading
                     )}
                   </h3>
                   <ul role="list" className="mt-6 min-h-[150px] space-y-4">
@@ -192,20 +186,8 @@ export const NewFooter = ({ footer, settings }) => {
             </div>
           </div>
 
-          <div className="mt-8 border-t border-gray-900/10 pt-8 md:flex md:items-center md:justify-between">
-            <div className="flex space-x-6 md:order-2">
-              {footer.data?.socials.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-400 hover:text-gray-500"
-                >
-                  <span className="sr-only">{item.name}</span>
-                  {/* <item.icon aria-hidden="true" className="h-6 w-6" /> */}
-                </a>
-              ))}
-            </div>
-            <p className="mt-8 text-xs leading-5 text-gray-500 md:order-1 md:mt-0">
+          <div className="mt-8 border-t border-gray-900/10 pt-8 md:flex md:items-center md:justify-center ">
+            <p className="mt-8 text-xs leading-5 text-gray-500 md:order-1 md:mt-0 ">
               &copy; {year} Kelderman Fysiotherapie. All rights reserved.
             </p>
           </div>
