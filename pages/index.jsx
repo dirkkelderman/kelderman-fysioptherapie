@@ -24,7 +24,14 @@ const Index = ({ page, navigation, settings, footer }) => {
         <meta name="referrer" content="origin-when-cross-origin" />
         <meta
           name="keywords"
-          content="fysiotherapie, kelderman, therapie, behandeling, revalidatie, fysio"
+          content="fysiotherapie, kelderman, therapie, behandeling, revalidatie, fysio, zwangerschapsfitness, postpartum fitness, mom workout, fysiotherapie weesp, sportrevalidatie, zwanger fitness, dry needling"
+        />
+        <meta name="geo.region" content="NL-NH" />
+        <meta name="geo.placename" content="Weesp" />
+        <link
+          rel="alternate"
+          hrefLang="nl-NL"
+          href="https://www.keldermanfysiotherapie.nl/"
         />
       </Head>
       <NextSeo
@@ -49,6 +56,45 @@ const Index = ({ page, navigation, settings, footer }) => {
               type: "image/png",
             },
           ],
+        }}
+        additionalMetaTags={[
+          {
+            property: "business:contact_data:street_address",
+            content: "Bloemendalerweg 50",
+          },
+          {
+            property: "business:contact_data:locality",
+            content: "Weesp",
+          },
+          {
+            property: "business:contact_data:country",
+            content: "Netherlands",
+          },
+        ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "PhysicalTherapist",
+            name: "Kelderman Fysiotherapie",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Bloemendalerweg 50",
+              addressLocality: "Weesp",
+              addressCountry: "NL",
+            },
+            priceRange: "€€",
+            areaServed: ["Weesp", "Almere", "Amstelveen"],
+            serviceType: [
+              "Fysiotherapie",
+              "Sportrevalidatie",
+              "Zwangerschapsfitness",
+              "Postpartum fitness",
+              "Dry needling",
+            ],
+          }),
         }}
       />
       <SliceZone slices={page.data.slices} components={components} />
